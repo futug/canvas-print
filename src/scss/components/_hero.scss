@@ -1,0 +1,126 @@
+.hero {
+  position: relative;
+  background-color: var(--light-color);
+  overflow: hidden;
+  color: var(--light-color);
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 172px;
+
+    @media (max-width: 1024px) {
+      padding-bottom: 123px;
+    }
+
+    @media (max-width: 880px) {
+      padding-bottom: 90px;
+    }
+  }
+
+  &__title {
+    margin-top: 165px;
+    font-size: 110px;
+    line-height: 80px;
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    @media (max-width: 1024px) {
+      font-size: 90px;
+      line-height: 80px;
+      margin-top: 122px;
+    }
+
+    @media (max-width: 880px) {
+      font-size: 70px;
+      line-height: 60px;
+    }
+
+    @media (max-width: 525px) {
+      font-size: 50px;
+      line-height: 36px;
+      margin-top: 80px;
+
+      & br {
+        display: none;
+      }
+    }
+  }
+
+  &__descr {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (max-width: 1024px) {
+      font-size: 18px;
+      line-height: 22px;
+      gap: 37px;
+      margin-top: 70px;
+    }
+
+    @media (max-width: 880px) {
+      gap: 37px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 525px) {
+      flex-direction: column;
+      margin-left: 37px;
+      margin-top: 50px;
+
+      & p {
+        position: relative;
+      }
+      & p::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -39px;
+        width: 26px;
+        height: 100%;
+        background: url("../../img/arrow_icon.svg") no-repeat center / contain;
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 210px;
+    background-color: var(--primary-accent-color);
+    color: inherit;
+    border-radius: 0 0 0 20px;
+    padding: 13px 40px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (max-width: 1024px) {
+      margin-top: 90px;
+    }
+
+    @media (max-width: 525px) {
+      margin-top: 60px;
+    }
+  }
+}

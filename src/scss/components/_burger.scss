@@ -1,0 +1,23 @@
+.burger {
+  width: 40px;
+  height: 36px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &__item {
+    width: 100%;
+    height: 2px;
+    background-color: var(--black);
+  }
+
+  @media (max-width: 880px) {
+    display: flex;
+  }
+
+  @media (max-width: 525px) {
+    width: 30px;
+    height: 22px;
+  }
+}

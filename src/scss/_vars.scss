@@ -1,0 +1,17 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Montserrat", sans-serif;
+  --content-width: 1146px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --primary-text-color-dark: #212121;
+  --primary-text-color-light: #fff;
+  --primary-accent-color: #e70000;
+  --secondary-text-color: #2b2b2b;
+  --black: #000;
+}
