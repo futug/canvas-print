@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Печать на холстах</title>
+  <link
+    rel="preload"
+    href="fonts/Montserrat-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat-Semibold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Montserrat-Bold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Quacker_RUS.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
+  <div class="header__content container">
+    <a href="#" class="header__logo"
+      ><img
+        loading="lazy"
+        src="../img/company_logo.svg"
+        class="image"
+        alt="Логототип компании"
+    /></a>
+    <a href="tel:+79939211596" class="header__phone">+7 993 921-15-96</a>
+    <nav class="nav header__navigation" title="Навигация">
+      <ul class="list-reset nav__list header__nav">
+        <li class="nav__item header__nav-item header__nav-item--active">
+          <a href="#" class="nav__link">Цены</a>
+        </li>
+        <li class="nav__item header__nav-item">
+          <a href="#" class="nav__link">Доставка</a>
+        </li>
+        <li class="nav__item header__nav-item">
+          <a href="#" class="nav__link">Галлерея</a>
+        </li>
+        <li class="nav__item header__nav-item">
+          <a href="#" class="nav__link">О нас</a>
+        </li>
+        <li class="nav__item header__nav-item">
+          <a href="#" class="nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__contacts" title="Социальные сети">
+      <a href="#" class="header__contacts-link">
+        <img
+          loading="lazy"
+          src="../img/whatsapp_icon.svg"
+          class="image"
+          width=""
+          height=""
+          alt=""
+        />
+      </a>
+      <a href="#" class="header__contacts-link">
+        <img
+          loading="lazy"
+          src="../img/tg_icon.svg"
+          class="image"
+          width=""
+          height=""
+          alt=""
+        />
+      </a>
+    </div>
+    <!-- бургер меню -->
+    <div class="burger">
+      <div class="burger__item"></div>
+      <div class="burger__item"></div>
+      <div class="burger__item"></div>
+    </div>
+    <!-- бургер меню -->
+    <!-- мобильное меню -->
+    <div class="mobile-menu">
+      <div class="mobile-menu__header">
+        <div class="mobile-menu__close">
+          <img src="../img/svg/close_icon.svg" alt="" />
+        </div>
+        <a href="tel:+79939211596" class="mobile-menu__call">
+          <img
+            loading="lazy"
+            src="../img/call_icon.svg"
+            class="image"
+            width=""
+            height=""
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="mobile-menu__body">
+        <nav class="nav" title="Навигация">
+          <ul class="list-reset nav__list mobile-menu__nav">
+            <li class="nav__item mobile-menu__nav-link">
+              <a href="#" class="nav__link">Цены</a>
+            </li>
+            <li class="nav__item mobile-menu__nav-link">
+              <a href="#" class="nav__link">Доставка</a>
+            </li>
+            <li class="nav__item mobile-menu__nav-link">
+              <a href="#" class="nav__link">Галерея</a>
+            </li>
+            <li class="nav__item mobile-menu__nav-link">
+              <a href="#" class="nav__link">Контакты</a>
+            </li>
+            <li class="nav__item mobile-menu__nav-link">
+              <a href="#" class="nav__link">О нас</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mobile-menu__footer">
+        <div class="mobile-menu__contacts">
+          <a href="#" class="mobile-menu__contacts-link">
+            <img
+              src="../img/blueprints/wa-mobile.svg"
+              class="image"
+              width=""
+              height=""
+              alt=""
+            />
+          </a>
+          <a href="#" class="mobile-menu__contacts-link">
+            <img
+              src="../img/blueprints/tg-mobile.svg"
+              class="image"
+              width=""
+              height=""
+              alt=""
+            />
+          </a>
+          <a href="#" class="mobile-menu__contacts-link">
+            <img
+              src="../img/blueprints/vk-mobile.svg"
+              class="image"
+              width=""
+              height=""
+              alt=""
+            />
+          </a>
+          <a href="#" class="mobile-menu__contacts-link">
+            <img
+              src="../img/blueprints/tg-mobile.svg"
+              class="image"
+              width=""
+              height=""
+              alt=""
+            />
+          </a>
+        </div>
+        <a href="tel:+79939211596" class="mobile-menu__phone"
+          >+7 993 921-15-96</a
+        >
+      </div>
+    </div>
+    <!-- мобильное меню -->
+  </div>
+</header>
+
+      <main class="main"><section class="hero">
+  <picture>
+    <source srcset="./img/hero.webp" type="image/webp" />
+    <source srcset="./img/hero.jpg" type="image/jpeg" />
+    <img loading="lazy" src="./img/hero.jpg" class="hero__image" alt="" />
+  </picture>
+  <div class="hero__content container">
+    <h1 class="section-title hero__title">
+      Печать на холстах по <br />
+      фотографии
+    </h1>
+    <div class="hero__descr">
+      <p>Цена от 1600 руб.</p>
+      <p>Изготовим за 1 день</p>
+      <p>Оплата при получении</p>
+      <p>Доставка по всей России</p>
+    </div>
+    <button class="btn-reset hero__button">Узнать цену</button>
+  </div>
+</section>
+</main>
+      <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+    </div>
+  </body>
+</html>
