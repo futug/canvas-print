@@ -1,7 +1,7 @@
 const burger = document.querySelector(".burger");
 const mobileMenu = document.querySelector(".mobile-menu");
 const close = document.querySelector(".mobile-menu__close");
-const body = document.querySelector("body");
+export const body = document.querySelector("body");
 
 burger.addEventListener("click", mobileMenuUp);
 close.addEventListener("click", mobileMenuDown);

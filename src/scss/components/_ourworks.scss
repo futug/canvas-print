@@ -1,0 +1,42 @@
+.our-works {
+  padding-bottom: 90px;
+  &__slider {
+    margin-top: 70px;
+  }
+
+  &__container {
+    position: relative;
+    overflow: auto;
+  }
+
+  &__slide {
+    border-radius: 0 50px 0 0;
+    overflow: hidden;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__prev-btn,
+  &__next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    background-color: #000;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__prev-btn {
+    left: -50px;
+  }
+
+  &__next-btn {
+    right: -50px;
+  }
+}

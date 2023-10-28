@@ -185,7 +185,8 @@
   </div>
 </header>
 
-      <main class="main"><section class="hero">
+      <main class="main">
+        <section class="hero">
   <picture>
     <source srcset="./img/hero.webp" type="image/webp" />
     <source srcset="./img/hero.jpg" type="image/jpeg" />
@@ -202,12 +203,795 @@
       <p>Оплата при получении</p>
       <p>Доставка по всей России</p>
     </div>
-    <button class="btn-reset hero__button">Узнать цену</button>
+    <button class="btn-reset hero__button pop-up__button">Узнать цену</button>
   </div>
 </section>
-</main>
+<section class="sizes">
+  <div class="sizes-content container section-offset">
+    <h2 class="section-title sizes__title">Размеры и цены</h2>
+    <div class="sizes__descr">
+      <p>
+        Вы можете выбрать из 25 стандартных размеров, отсортированных по типу
+        ориентации или сделать заказ по своим размерам. Для печати мы используем
+        плоттер Canon image PROGRAF iPF9400 и дополнительное оборудование, такое
+        как станок для скрепления углов рам U-200 и гильотина Morso H. Цена
+        включает печать на качественном хлопковом холсте, подрамник и натяжку
+        холста на него.
+      </p>
+    </div>
+  </div>
+  <div class="sizes__calc">
+    <div class="sizes__calc-content container">
+      <div class="sizes__format">
+        <p class="sizes__format-title">Укажите формат</p>
+        <div class="sizes__format-variants">
+          <p class="sizes__format-variant" data-base="900">Альбомный</p>
+          <p class="sizes__format-variant" data-base="1000">Портретный</p>
+          <p class="sizes__format-variant" data-base="1200">Панорамный</p>
+          <p class="sizes__format-variant" data-base="1500">Квадратный</p>
+        </div>
+        <div class="sizes__format-select">
+          <select class="select-reset custom-select">
+            <option value="1">Выберите размер</option>
+            <option value="1.1">40×30</option>
+            <option value="1.2">45×30</option>
+            <option value="1.3">50×40</option>
+            <option value="1.4">60×40</option>
+            <option value="1.5">60×50</option>
+            <option value="1.6">70×50</option>
+            <option value="1.7">75×50</option>
+            <option value="1.8">80×60</option>
+            <option value="1.9">90×60</option>
+            <option value="2">100×70</option>
+            <option value="2.1">120×80</option>
+            <option value="2.2">30×30</option>
+            <option value="2.3">40×40</option>
+            <option value="2.4">50×50</option>
+            <option value="2.5">60×60</option>
+            <option value="2.6">80×80</option>
+            <option value="2.7">100×100</option>
+            <option value="2.8">30×90</option>
+            <option value="2.9">40×100</option>
+            <option value="3">40×120</option>
+          </select>
+          <img
+            loading="lazy"
+            src="../img/chevron_for_select.svg"
+            class="image"
+            width="16"
+            height="16"
+            alt="шеврон"
+          />
+        </div>
+        <p class="sizes__format-final pop-up__button">0 руб.</p>
+      </div>
+      <div class="sizes__variants">
+        <p class="sizes__variants-item" data-multiplier="1.1">40×30</p>
+        <p class="sizes__variants-item" data-multiplier="1.2">45×30</p>
+        <p class="sizes__variants-item" data-multiplier="1.3">50×40</p>
+        <p class="sizes__variants-item" data-multiplier="1.4">60×40</p>
+        <p class="sizes__variants-item" data-multiplier="1.5">60×50</p>
+        <p class="sizes__variants-item" data-multiplier="1.6">70×50</p>
+        <p class="sizes__variants-item" data-multiplier="1.7">75×50</p>
+        <p class="sizes__variants-item" data-multiplier="1.8">80×60</p>
+        <p class="sizes__variants-item" data-multiplier="1.9">90×60</p>
+        <p class="sizes__variants-item" data-multiplier="2">100×70</p>
+        <p class="sizes__variants-item" data-multiplier="2.1">120×80</p>
+        <p class="sizes__variants-item" data-multiplier="2.2">30×30</p>
+        <p class="sizes__variants-item" data-multiplier="2.3">40×40</p>
+        <p class="sizes__variants-item" data-multiplier="2.4">50×50</p>
+        <p class="sizes__variants-item" data-multiplier="2.5">60×60</p>
+        <p class="sizes__variants-item" data-multiplier="2.6">80×80</p>
+        <p class="sizes__variants-item" data-multiplier="2.7">100×100</p>
+        <p class="sizes__variants-item" data-multiplier="2.8">30×90</p>
+        <p class="sizes__variants-item" data-multiplier="2.9">40×100</p>
+        <p class="sizes__variants-item" data-multiplier="3">40×120</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal -->
+  <div class="pop-up">
+    <img
+      loading="lazy"
+      src="../img/svg/close_icon.svg"
+      class="pop-up__close-icon"
+      width="15"
+      height="15"
+      alt="close_icon"
+    />
+    <form class="pop-up__form">
+      <label>
+        <input
+          class="input-reset pop-up__form-input"
+          type="text"
+          placeholder="Введите имя"
+        />
+      </label>
+      <label>
+        <input
+          inputmode="numeric"
+          class="input-reset pop-up__form-input"
+          type="tel"
+          placeholder="Введите телефон"
+        />
+      </label>
+      <p class="pop-up__form-summary">
+        Итоговая стоимость заказа: <span>0 руб.</span>
+      </p>
+      <button class="btn-reset pop-up__form-button" type="button">
+        Оформить заказ
+      </button>
+    </form>
+  </div>
+  <!-- modal -->
+</section>
+
+        <section class="process">
+  <div class="process__content section-offset container">
+    <h2 class="section-title process__title">Процесс заказа</h2>
+    <div class="swiper process__slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="process__card">
+            <img
+              loading="lazy"
+              src="../img/svg/step_1.svg"
+              alt="."
+              class="image"
+              width="90"
+              height="90"
+              alt=""
+            />
+            <p class="process__descr">Загрузите качественное изображение</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="process__card">
+            <img
+              loading="lazy"
+              src="../img/svg/step_2.svg"
+              alt="."
+              class="image"
+              width="90"
+              height="90"
+              alt=""
+            />
+            <p class="process__descr">
+              Укажите желаемый размер, тип холста и <br />
+              толщину подрамника
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="process__card">
+            <img
+              loading="lazy"
+              src="../img/svg/step_3.svg"
+              alt="."
+              class="image"
+              width="90"
+              height="90"
+              alt=""
+            />
+            <p class="process__descr">
+              Подберите тип дизайна: от замены фона до <br />
+              сложной арт стилизации
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="process__card">
+            <img
+              loading="lazy"
+              src="../img/svg/step_4.svg"
+              alt="."
+              class="image"
+              width="90"
+              height="90"
+              alt=""
+            />
+            <p class="process__descr">
+              Через 1-2 рабочих дня ваш заказ готов к самовывозу или доставке
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ideas">
+  <div class="ideas__content section-offset container">
+    <h2 class="section-title ideas__title">Идеи для обработки картин</h2>
+    <div class="swiper ideas__slider">
+      <div class="swiper-wrapper ideas__slider">
+        <div class="swiper-slide ideas__slide">
+          <div class="idea__card">
+            <div class="ideas__image">
+              <picture>
+                <source srcset="img/first-idea.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/first-idea.jpg"
+                  class="image"
+                  alt="Идея"
+                />
+              </picture>
+            </div>
+            <p class="ideas__descr">Название идеи</p>
+          </div>
+        </div>
+        <div class="swiper-slide ideas__slide">
+          <div class="idea__card">
+            <div class="ideas__image">
+              <picture>
+                <source srcset="img/first-idea.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/first-idea.jpg"
+                  class="image"
+                  alt="Идея"
+                />
+              </picture>
+            </div>
+            <p class="ideas__descr">Название идеи</p>
+          </div>
+        </div>
+        <div class="swiper-slide ideas__slide">
+          <div class="idea__card">
+            <div class="ideas__image">
+              <picture>
+                <source srcset="img/second-idea.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/second-idea.jpg"
+                  class="image"
+                  alt="Идея"
+                />
+              </picture>
+            </div>
+            <p class="ideas__descr">Название идеи</p>
+          </div>
+        </div>
+        <div class="swiper-slide ideas__slide">
+          <div class="idea__card">
+            <div class="ideas__image">
+              <picture>
+                <source srcset="img/first-idea.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/first-idea.jpg"
+                  class="image"
+                  alt="Идея"
+                />
+              </picture>
+            </div>
+            <p class="ideas__descr">Название идеи</p>
+          </div>
+        </div>
+        <div class="swiper-slide ideas__slide">
+          <div class="idea__card">
+            <div class="ideas__image">
+              <picture>
+                <source srcset="img/third-idea.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/third-idea.jpg"
+                  class="image"
+                  alt="Идея"
+                />
+              </picture>
+            </div>
+            <p class="ideas__descr">Название идеи</p>
+          </div>
+        </div>
+        <div class="swiper-slide ideas__slide">
+          <div class="idea__card">
+            <div class="ideas__image">
+              <picture>
+                <source srcset="img/first-idea.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/first-idea.jpg"
+                  class="image"
+                  alt="Идея"
+                />
+              </picture>
+            </div>
+            <p class="ideas__descr">Название идеи</p>
+          </div>
+        </div>
+        <div class="swiper-slide ideas__slide">
+          <div class="idea__card">
+            <div class="ideas__image">
+              <picture>
+                <source srcset="img/fourth-idea.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/fourth-idea.jpg"
+                  class="image"
+                  alt="Идея"
+                />
+              </picture>
+            </div>
+            <p class="ideas__descr">Название идеи</p>
+          </div>
+        </div>
+        <div class="swiper-slide ideas__slide">
+          <div class="idea__card">
+            <div class="ideas__image">
+              <picture>
+                <source srcset="img/first-idea.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/first-idea.jpg"
+                  class="image"
+                  alt="Идея"
+                />
+              </picture>
+            </div>
+            <p class="ideas__descr">Название идеи</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="stretch">
+  <div class="stretch__content section-offset container">
+    <h2 class="section-title stretch__title">Виды натяжек на подрамник</h2>
+    <div class="swiper stretch__slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="stretch__card">
+            <img
+              loading="lazy"
+              src="../img/svg/simple_strethc.svg"
+              class="image"
+              alt="Простая натяжка на подрамник"
+            />
+            <p class="stretch__descr">Обычная натяжка</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="stretch__card">
+            <img
+              loading="lazy"
+              src="../img/svg/studio_stretch.svg"
+              class="image"
+              alt="Студийная натяжка на подрамник"
+            />
+            <p class="stretch__descr">Студийная натяжка</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="stretch__card">
+            <img
+              loading="lazy"
+              src="../img/svg/gallery_stretch.svg"
+              class="image"
+              alt="Галерейная натяжка на подрамник"
+            />
+            <p class="stretch__descr">Галерейная натяжка</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="stretch__summary">
+      Стандартом является натяжка на подрамник толщиной 2 см, под который без
+      труда можно подобрать багет. Для интерьерных решений в стиле лофт, кантри
+      и прочих подходит подрамник с толщиной в 4 см.
+    </p>
+  </div>
+</section>
+<section class="coverages">
+  <div class="coverages__content section-offset container">
+    <h2 class="section-title coverages__title">Виды покрытия холста</h2>
+    <div class="swiper coverages__slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="coverages__card">
+            <div class="coverages__image">
+              <picture>
+                <source srcset="img/lackuer.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/lackuer.jpg"
+                  class="image"
+                  alt="Идея"
+                />
+              </picture>
+            </div>
+            <a href="#" class="coverages__descr"
+              >Покрытие матовым лаком <span> Подробнее</span></a
+            >
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="coverages__card">
+            <div class="coverages__image">
+              <picture>
+                <source srcset="img/gel.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/gel.jpg"
+                  class="image"
+                  alt="Идея"
+                />
+              </picture>
+            </div>
+            <a href="#" class="coverages__descr"
+              >Покрытие текстурным гелем <span>Подробнее</span></a
+            >
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="coverages__card">
+            <div class="coverages__image">
+              <picture>
+                <source srcset="img/acrylic.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/acrylic.jpg"
+                  class="image"
+                  alt="Идея"
+                />
+              </picture>
+            </div>
+            <a href="#" class="coverages__descr"
+              >Покрытие акриловой краской <span>Подробнее</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="frames">
+  <div class="frames__content section-offset container">
+    <h2 class="section-title frames__title">Виды багетных рам</h2>
+    <div class="swiper frames__slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="frames__card">
+            <picture>
+              <source srcset="img/frames/1.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/frames/1.jpg"
+                class="frames__image"
+                alt="Виды багетных рам"
+              />
+            </picture>
+            <a href="#" class="frames__descr">Описание багета</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="frames__card">
+            <picture>
+              <source srcset="img/frames/2.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/frames/2.jpg"
+                class="frames__image"
+                alt="Виды багетных рам"
+              />
+            </picture>
+            <a href="#" class="frames__descr">Описание багета</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="frames__card">
+            <picture>
+              <source srcset="img/frames/3.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/frames/3.jpg"
+                class="frames__image"
+                alt="Виды багетных рам"
+              />
+            </picture>
+            <a href="#" class="frames__descr">Описание багета</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="frames__card">
+            <picture>
+              <source srcset="img/frames/4.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/frames/4.jpg"
+                class="frames__image"
+                alt="Виды багетных рам"
+              />
+            </picture>
+            <a href="#" class="frames__descr">Описание багета</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="frames__card">
+            <picture>
+              <source srcset="img/frames/5.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/frames/5.jpg"
+                class="frames__image"
+                alt="Виды багетных рам"
+              />
+            </picture>
+            <a href="#" class="frames__descr">Описание багета</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="frames__card">
+            <picture>
+              <source srcset="img/frames/6.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/frames/6.jpg"
+                class="frames__image"
+                alt="Виды багетных рам"
+              />
+            </picture>
+            <a href="#" class="frames__descr">Описание багета</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="frames__card">
+            <picture>
+              <source srcset="img/frames/7.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/frames/7.jpg"
+                class="frames__image"
+                alt="Виды багетных рам"
+              />
+            </picture>
+            <a href="#" class="frames__descr">Описание багета</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="frames__card">
+            <picture>
+              <source srcset="img/frames/8.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/frames/8.jpg"
+                class="frames__image"
+                alt="Виды багетных рам"
+              />
+            </picture>
+            <a href="#" class="frames__descr">Описание багета</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="frames__card">
+            <picture>
+              <source srcset="img/frames/9.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/frames/9.jpg"
+                class="frames__image"
+                alt="Виды багетных рам"
+              />
+            </picture>
+            <a href="#" class="frames__descr">Описание багета</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="frames__card">
+            <picture>
+              <source srcset="img/frames/10.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/frames/10.jpg"
+                class="frames__image"
+                alt="Виды багетных рам"
+              />
+            </picture>
+            <a href="#" class="frames__descr">Описание багета</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="frames__more"
+      ><span>Посмотреть полный список багетных рам</span
+      ><span>Показать еще</span></a
+    >
+  </div>
+</section>
+<section class="our-works">
+  <div class="our-works__content section-offset container">
+    <h2 class="section-title our-works__title">Наши работы</h2>
+    <div class="swiper our-works__slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="our-works__slide">
+            <picture>
+              <source srcset="img/works/work_1.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/works/work_1.jpg"
+                class="image"
+                alt="фото работы"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="our-works__slide">
+            <picture>
+              <source srcset="img/works/work_2.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/works/work_2.jpg"
+                class="image"
+                alt="фото работы"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="our-works__slide">
+            <picture>
+              <source srcset="img/works/work_3.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/works/work_3.jpg"
+                class="image"
+                alt="фото работы"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="our-works__slide">
+            <picture>
+              <source srcset="img/works/work_4.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/works/work_4.jpg"
+                class="image"
+                alt="фото работы"
+              />
+            </picture>
+          </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
+    </div>
+    <!-- <div class="our-works__prev-btn"></div>
+    <div class="our-works__next-btn"></div> -->
+  </div>
+</section>
+
+        <section class="testimonials">
+  <div class="testimonials__content section-offset container">
+    <h2 class="section-title testimonials__title">Отзывы наших клиентов</h2>
+    <div class="testimonials__descr">
+      <p>
+        Добро пожаловать в мастерскую «Печать на Холстах». Мы предлагаем
+        качественную фотопечать на холсте, уникальную услугу, которая перенесет
+        ваши любимые фото на тканевые полотна, превращая их в истинные
+        произведения искусства.
+      </p>
+      <p>
+        Заказать фотографию на картине на холсте стало намного проще, с помощью
+        нашего онлайн- сервиса вы сможете быстро и недорого сделать заказ, не
+        вставая из-за компьютера. Достаточно загрузить свою фотографию, выбрать
+        размер холста и подрамник и мы приступим к работе.
+      </p>
+      <a href="#" class="btn-reset testimonials__button">Посмотреть отзывы</a>
+    </div>
+  </div>
+</section>
+<section class="summary">
+  <div class="summary__content section-offset container">
+    <h2 class="section-title summary__title">
+      Изготовление картин по фото на холсте
+    </h2>
+    <div class="summary__descr">
+      <p>
+        Наша мастерская в Москве специализируется на изготовлении портретов и
+        картин по фото на холсте. Все, что вам нужно, — предоставить нам
+        фотографию, а наши мастера превратят ее в великолепный рисунок на
+        холсте.
+      </p>
+      <p>
+        Цена зависит от выбранного вами размера холста и вида подрамника. Мы
+        умеем работать не только с портретами, но и с пейзажами, животными,
+        абстракцией и любыми другими изображениями. Более того, у нас можно
+        заказать не только печать на холстах, но и натяжку уже готового
+        изображения на подрамник.
+      </p>
+      <p>
+        С нашей услугой вы сможете держать свои драгоценные моменты не только в
+        сердце, но и видеть их каждый день на стенах своего дома или офиса. А
+        также они станут отличным подарком для ваших близких и друзей.
+      </p>
+      <p>
+        Мы предлагаем доставку по Москве и всей России. Ваши заказы будут
+        аккуратно упакованы и доставлены в течение нескольких дней. Если вы
+        находитесь в Москве, вы можете воспользоваться услугой «заказ на
+        сегодня», и мы привезем вашу картину в тот же день.
+      </p>
+      <p>
+        Наша миссия — сделать искусство доступным для всех Печать на холстах по
+        фото — это возможность каждому окунуться в мир большой живописи, не
+        выходя из дома. «Печать на Холстах» — это не просто фотохолст, это
+        искусство, которое живет и дышит Заказывая у нас, вы получаете не просто
+        изображение на холсте, а произведение искусства, выполненное с любовью и
+        мастерством
+      </p>
+      <p>
+        Мы ждем ваших заказов и обещаем превратить ваши любимые фотографии в
+        великолепные картины на холсте. Присоединяйтесь к нашим довольным
+        клиентам, и пусть искусство войдет в вашу жизнь!
+      </p>
+    </div>
+  </div>
+</section>
+
+      </main>
       <footer class="footer">
-  <div class="container"></div>
+  <div class="footer__content container">
+    <button class="btn-reset footer__cta pop-up__button">
+      Заказать звонок
+    </button>
+    <a href="#" class="footer__privacy">Политика конфиденциальности</a>
+    <div class="footer__contacts">
+      <p class="footer__adress">
+        <span>Адрес производства:</span> Москва, МКАД 23 км. внешняя сторона
+        владение 3.
+      </p>
+      <p class="footer__contacts-title">Пункт выдачи:</p>
+      <p class="footer__delivery"><span>Email:</span>zakaz@holst-na-zakaz.ru</p>
+      <p class="footer__delivery"><span>График работы:</span>Круглосуточно</p>
+      <p class="footer__delivery"><span>Телефон:</span> +7 993 921-15-96</p>
+    </div>
+    <p class="footer__copy">© Печать на холстах 2023</p>
+    <div class="footer__social">
+      <a href="#"
+        ><img
+          loading="lazy"
+          src="../img/footer_social/phone_icon.svg"
+          class="image"
+          width="35"
+          height="35"
+          alt="социальные сети"
+      /></a>
+      <a href="#"
+        ><img
+          loading="lazy"
+          src="../img/footer_social/tg_icon.svg"
+          class="image"
+          width="35"
+          height="35"
+          alt="социальные сети"
+      /></a>
+      <a href="#"
+        ><img
+          loading="lazy"
+          src="../img/footer_social/vk_icon.svg"
+          class="image"
+          width="35"
+          height="35"
+          alt="социальные сети"
+      /></a>
+      <a href="#"
+        ><img
+          loading="lazy"
+          src="../img/footer_social/inst_icon.svg"
+          class="image"
+          width="35"
+          height="35"
+          alt="социальные сети"
+      /></a>
+    </div>
+  </div>
 </footer>
 
     </div>
