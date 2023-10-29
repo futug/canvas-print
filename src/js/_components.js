@@ -9,3 +9,6 @@ import stretchSwiper from "./components/stretchSwiper";
 import coveragesSwiper from "./components/coveragesSwiper";
 import framesSwiper from "./components/framesSwiper";
 import ourWorksSwiper from "./components/ourWorksSwiper";
+import calcFileLabel from "./components/calcFileLabel";
+import calcDemo from "./components/calcDemo";
+import calcFakeSelect from "./components/calcFakeSelect";
