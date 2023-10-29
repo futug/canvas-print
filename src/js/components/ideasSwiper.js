@@ -12,7 +12,7 @@ const swiper = new Swiper(".ideas__slider", {
       grid: {
         rows: 1,
       },
-      slidesPerView: 1,
+      slidesPerView: 1.5,
       spaceBetween: 20,
     },
     525: {
