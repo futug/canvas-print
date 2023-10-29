@@ -2,6 +2,11 @@
   padding-bottom: 90px;
   &__slider {
     margin-top: 70px;
+    padding-bottom: 40px;
+
+    @media (max-width: 1024px) {
+      padding-bottom: 60px;
+    }
   }
 
   &__container {
@@ -20,11 +25,14 @@
     object-fit: cover;
   }
 
+  .swiper-pagination-bullet {
+    background-color: #C1BFBF;
+  }
+
   &__prev-btn,
   &__next-btn {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 0;
     z-index: 2;
     cursor: pointer;
     background-color: #000;
