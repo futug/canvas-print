@@ -18,7 +18,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_coveragesSwiper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/coveragesSwiper */ "./src/js/components/coveragesSwiper.js");
 /* harmony import */ var _components_framesSwiper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/framesSwiper */ "./src/js/components/framesSwiper.js");
 /* harmony import */ var _components_ourWorksSwiper__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/ourWorksSwiper */ "./src/js/components/ourWorksSwiper.js");
+/* harmony import */ var _components_calcFileLabel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/calcFileLabel */ "./src/js/components/calcFileLabel.js");
+/* harmony import */ var _components_calcDemo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/calcDemo */ "./src/js/components/calcDemo.js");
+/* harmony import */ var _components_calcFakeSelect__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/calcFakeSelect */ "./src/js/components/calcFakeSelect.js");
 console.log("components");
+
+
+
 
 
 
@@ -195,6 +201,116 @@ testBtn.addEventListener("click", () => {
 
 /***/ }),
 
+/***/ "./src/js/components/calcDemo.js":
+/*!***************************************!*\
+  !*** ./src/js/components/calcDemo.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _calcFileLabel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calcFileLabel */ "./src/js/components/calcFileLabel.js");
+
+const inputs = document.querySelectorAll("input[name]");
+const optionRows = document.querySelectorAll(".calc__option-row");
+inputs.forEach(input => {
+  input.addEventListener("change", () => {
+    const name = input.getAttribute("name");
+    const matchingOptionRow = document.querySelector(`.calc__option-row[data-name="${name}"]`);
+    if (matchingOptionRow) {
+      if (name === "file") {
+        matchingOptionRow.querySelector(".calc__option-descr").textContent = _calcFileLabel__WEBPACK_IMPORTED_MODULE_0__.selectedFiles;
+      } else {
+        matchingOptionRow.querySelector(".calc__option-descr").textContent = input.value;
+      }
+    }
+  });
+});
+const widthInput = document.querySelector(".width");
+const heightInput = document.querySelector(".height");
+const inputSize = document.querySelectorAll("input[name='size']");
+let customSize = "";
+widthInput.addEventListener("input", updateCustomSize);
+heightInput.addEventListener("input", updateCustomSize);
+inputSize.forEach(input => {
+  input.addEventListener("click", () => {
+    widthInput.value = "";
+    heightInput.value = "";
+  });
+});
+function updateCustomSize() {
+  customSize = `${widthInput.value} x ${heightInput.value}`;
+  optionRows.forEach(row => {
+    const name = row.getAttribute("data-name");
+    if (name === "size") {
+      row.querySelector(".calc__option-descr").textContent = customSize;
+    }
+  });
+  inputSize.forEach(input => {
+    input.checked = false;
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/components/calcFakeSelect.js":
+/*!*********************************************!*\
+  !*** ./src/js/components/calcFakeSelect.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./burger */ "./src/js/components/burger.js");
+
+const fakeMenu = document.querySelector(".calc__select");
+const fakeSelect = document.querySelector(".calc__fake-select");
+const fakeSelectOption = document.querySelectorAll("input[name='size']");
+let chosenValue = "";
+fakeSelect.addEventListener("click", () => {
+  fakeMenu.classList.add("calc__select--isOpen");
+  _burger__WEBPACK_IMPORTED_MODULE_0__.body.classList.add("lock");
+});
+fakeSelectOption.forEach(option => {
+  option.addEventListener("click", e => {
+    chosenValue = e.target.value;
+    fakeSelect.querySelector("p").textContent = chosenValue;
+    fakeMenu.classList.remove("calc__select--isOpen");
+    _burger__WEBPACK_IMPORTED_MODULE_0__.body.classList.remove("lock");
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/components/calcFileLabel.js":
+/*!********************************************!*\
+  !*** ./src/js/components/calcFileLabel.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   fileInput: () => (/* binding */ fileInput),
+/* harmony export */   selectedFiles: () => (/* binding */ selectedFiles)
+/* harmony export */ });
+const label = document.querySelector(".calc__file");
+const fileInput = label.querySelector("input");
+let selectedFiles = "";
+fileInput.addEventListener("change", event => {
+  selectedFiles = event.target.files[0].name;
+  if (selectedFiles.length > 0) {
+    label.querySelector("span").textContent = selectedFiles;
+  } else {
+    label.querySelector("span").textContent = "Выберите файлы";
+  }
+});
+label.addEventListener("click", () => {
+  console.log("click");
+});
+
+/***/ }),
+
 /***/ "./src/js/components/coveragesSwiper.js":
 /*!**********************************************!*\
   !*** ./src/js/components/coveragesSwiper.js ***!
@@ -324,7 +440,7 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".ideas__slide
         rows: 1
       },
       slidesPerView: 1.5,
-      spaceBetween: 40
+      spaceBetween: 40,
     },
     525: {
       grid: {
