@@ -1,23 +1,29 @@
 import Swiper from "swiper";
-Swiper.use();
+import { Keyboard, A11y, FreeMode } from "swiper/modules";
+
 const swiper = new Swiper(".stretch__slider", {
-  slidesPerView: "4",
+  modules: [Keyboard, FreeMode, A11y],
+  slidesPerView: "1",
   breakpoints: {
     320: {
-      slidesPerView: 1,
-      spaceBetween: 20,
+      slidesPerView: 1.5,
     },
     525: {
       slidesPerView: 2,
-      spaceBetween: 20,
     },
     768: {
       slidesPerView: 2.5,
-      spaceBetween: 40,
     },
     1024: {
       slidesPerView: 3,
-      spaceBetween: 60,
     },
   },
+  spaceBetween: 20,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  a11y: true,
+  grabCursor: true,
+  freeMode: true,
 });

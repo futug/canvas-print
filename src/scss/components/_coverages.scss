@@ -25,21 +25,17 @@
   @media (max-width: 1024px) {
     border-radius: 0 80px 0 80px;
     padding-bottom: 50px;
-    background: url("../../img/svg/coverage_decore-bot-left.svg") no-repeat 0.5%
-        85%,
+    background: url("../../img/svg/coverage_decore-bot-left.svg") no-repeat 0.5% 85%,
       url("../../img/svg/coverage_decore-top-right.svg") no-repeat 95% 8%,
-      url("../../img/svg/coverage_decore-bot-right.svg") no-repeat bottom right/
-        35px 65px,
+      url("../../img/svg/coverage_decore-bot-right.svg") no-repeat bottom right/ 35px 65px,
       var(--primary-accent-color);
   }
 
   @media (max-width: 525px) {
     border-radius: 0 40px 0 40px;
     padding-bottom: 40px;
-    background: url("../../img/svg/coverage_decore-top-right.svg") no-repeat 95%
-        8%/ 120px 131px,
-      url("../../img/svg/coverage_decore-bot-right.svg") no-repeat bottom right/
-        35px 65px,
+    background: url("../../img/svg/coverage_decore-top-right.svg") no-repeat 95% 8%/ 120px 131px,
+      url("../../img/svg/coverage_decore-bot-right.svg") no-repeat bottom right/ 35px 65px,
       var(--primary-accent-color);
   }
 
@@ -63,70 +59,49 @@
   }
 
   &__card {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 10px;
-
-    @media (max-width: 1024px) {
-      gap: 15px;
-    }
   }
 
   &__image {
     border-radius: 60px 0 0 0;
     overflow: hidden;
-    max-width: 380px;
-    width: 380px;
-    margin: 0 auto;
-    height: 353px;
+    width: 100%;
 
-    @media (max-width: 1024px) {
-      max-width: 300px;
-      width: 300px;
-      height: 339px;
-    }
-
-    @media (max-width: 525px) {
-      max-width: 250px;
-      width: 250px;
-      height: 300px;
-    }
-
-    .image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    img {
+      vertical-align: middle;
     }
   }
 
   &__descr {
-    max-width: 380px;
-    width: 380px;
-    font-size: 18px;
-    line-height: 28px;
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
+    width: 100%;
+    font-size: 23px;
+    line-height: 28px;
     color: #000000;
-    display: block;
     padding: 15px 0 19px 0;
     background-color: #fff;
-    margin: 0 auto;
 
     @media (max-width: 1024px) {
-      max-width: 300px;
-      width: 300px;
       font-size: 18px;
       line-height: 22px;
     }
 
-    @media (max-width: 525px) {
-      max-width: 250px;
-      width: 250px;
-      font-size: 17px;
-      line-height: 21px;
-    }
-
-    & span {
+    span {
       display: block;
     }
+  }
+
+  .swiper-slide {
+    height: auto;
   }
 }
