@@ -5,9 +5,8 @@ const coverSwiper = new Swiper(".coverages__slider", {
   modules: [Keyboard, FreeMode, A11y],
   slidesPerView: "1",
   spaceBetween: 20,
-
   breakpoints: {
-    320: {
+    360: {
       slidesPerView: 1.5,
     },
     525: {
