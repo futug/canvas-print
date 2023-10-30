@@ -1,5 +1,5 @@
 import { selectedFiles, fileInput } from "./calcFileLabel";
-const inputs = document.querySelectorAll("input[name]");
+const inputs = document.querySelectorAll("input[name], select[name]");
 const optionRows = document.querySelectorAll(".calc__option-row");
 
 inputs.forEach((input) => {
