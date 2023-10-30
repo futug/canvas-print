@@ -301,26 +301,31 @@
         <!-- Дизайнерская обработка -->
         <p class="calc__option-title">Дизайнерская обработка::</p>
         <div class="calc__option-vars">
-          <label class="calc__option--wide">
-            <input
-              type="radio"
-              class="calc__option-variant"
-              value="Не выбрано"
-              name="design"
+          <div class="sizes__format-select calc__design-select">
+            <select class="select-reset custom-select" name="design">
+              <option value="Обработка не нужна">Обработка не нужна</option>
+              <option value="Поп-арт">Поп-арт</option>
+              <option value="Дрим-арт">Дрим-арт</option>
+              <option value="Коллаж">Коллаж</option>
+              <option value="Фотомозайка">Фотомозайка</option>
+              <option value="Шарж">Шарж</option>
+              <option value="В стилe Love is...">В стилe Love is...</option>
+              <option value="Аниме">Аниме</option>
+              <option value="Портрет из слов">Портрет из слов</option>
+              <option value="Digital art">Digital art</option>
+              <option value="В образе">В образе</option>
+              <option value="Гранж">Гранж</option>
+            </select>
+            <img
+              loading="lazy"
+              src="../img/chevron_for_select.svg"
+              class="image"
+              width="16"
+              height="16"
+              alt="шеврон"
             />
-            <span>Выбрать стиль оформления</span>
-          </label>
-          <label class="calc__option--wide">
-            <input
-              type="radio"
-              class="calc__option-variant"
-              value="Без дизайнерской обработки"
-              name="design"
-            />
-            <span>Не нужно</span>
-          </label>
+          </div>
         </div>
-        <!-- Дизайнерская обработка -->
         <!-- Упаковка -->
         <p class="calc__option-title">Упаковка:</p>
         <div class="calc__option-vars">
@@ -411,7 +416,7 @@
             </div>
             <div class="calc__option-row" data-name="order">
               <p class="calc__option-sub">Срок изготовления:</p>
-              <p class="calc__option-descr">Не выбрано</p>
+              <p class="calc__option-descr">1-2 рабочих дня</p>
             </div>
             <div class="calc__option-row" data-name="total">
               <p class="calc__option-sub">Итоговая стоимость холста:</p>
