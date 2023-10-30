@@ -1,7 +1,7 @@
 import Swiper from "swiper";
-Swiper.use();
+
 const swiper = new Swiper(".process__slider", {
-  slidesPerView: "4",
+  slidesPerView: "1",
   breakpoints: {
     320: {
       slidesPerView: 2,

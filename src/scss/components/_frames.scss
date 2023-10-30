@@ -3,11 +3,19 @@
   padding-bottom: 90px;
 
   &__slider {
-    margin-top: 40px;
+    margin-top: 70px;
+
+    @media (max-width: 1024px) {
+      margin-top: 40px;
+    }
+
+    @media (max-width: 525px) {
+      margin-top: 20px;
+    }
   }
 
   &__card {
-    margin-top: 30px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,6 +23,7 @@
   }
 
   &__image {
+    width: 100%;
     max-width: 217px;
     max-height: 238px;
     margin: 0 auto;
@@ -31,10 +40,11 @@
   }
 
   &__descr {
+    width: 100%;
+    box-sizing: border-box;
     text-align: center;
     display: block;
     max-width: 217px;
-    width: 217px;
     padding: 15px 0;
     font-size: 18px;
     line-height: 22px;
@@ -44,14 +54,12 @@
 
     @media (max-width: 1024px) {
       max-width: 178px;
-      width: 178px;
       font-size: 18px;
       line-height: 22px;
     }
 
     @media (max-width: 525px) {
       max-width: 160px;
-      width: 160px;
       font-size: 17px;
       line-height: 21px;
     }
