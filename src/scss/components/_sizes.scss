@@ -1,5 +1,6 @@
 .sizes {
   color: var(--primary-text-color-dark);
+
   &__title {
     font-size: 80px;
     line-height: 92px;
@@ -64,16 +65,16 @@
       url("../../img/sizes_calc_decore-center.svg") no-repeat center,
       url("../../img/sizes_calc_decore-right.svg") no-repeat bottom right,
       var(--primary-accent-color);
+
     @media (max-width: 525px) {
       padding-top: 40px;
       padding-bottom: 40px;
       border-radius: 0 40px 0 40px;
-      background: url("../../img/sizes_calc_decore-left.svg") no-repeat top
-          left/ 20px 40px,
-        url("../../img/sizes_calc_decore-right.svg") no-repeat bottom right /
-          20px 40px,
+      background: url("../../img/sizes_calc_decore-left.svg") no-repeat top left/ 20px 40px,
+        url("../../img/sizes_calc_decore-right.svg") no-repeat bottom right / 20px 40px,
         var(--primary-accent-color);
     }
+
     &-content {
       // display: grid;
       // grid-template-columns: repeat(12, 80px);
@@ -130,6 +131,7 @@
         z-index: -1;
       }
     }
+
     &-variant {
       background-color: #fff;
       text-align: center;
@@ -154,6 +156,7 @@
         color: var(--primary-text-color-light);
       }
     }
+
     &-final {
       margin-top: 38px;
       width: 100%;
@@ -167,7 +170,8 @@
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        background-color: #2e2e2e;
+        //background-color: #2e2e2e;
+        box-shadow: 5px -3px 8px 1px rgba(0, 0, 0, 0.61);
       }
 
       @media (max-width: 525px) {
@@ -202,8 +206,7 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 
-    @media (max-width: 1024px) {
-    }
+    @media (max-width: 1024px) {}
 
     @media (max-width: 960px) {
       display: none;
