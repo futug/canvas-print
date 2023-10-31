@@ -68,6 +68,7 @@
                 class="calc__option-variant"
                 value="30x20"
                 name="size"
+                data-price="1000"
               />
               <span>30x20</span>
             </label>
@@ -77,6 +78,7 @@
                 class="calc__option-variant"
                 value="40x30"
                 name="size"
+                data-price="1300"
               />
               <span>40x30</span>
             </label>
@@ -86,6 +88,7 @@
                 class="calc__option-variant"
                 value="45x30"
                 name="size"
+                data-price="1400"
               />
               <span>45x30</span>
             </label>
@@ -95,6 +98,7 @@
                 class="calc__option-variant"
                 value="50x40"
                 name="size"
+                data-price="1600"
               />
               <span>50x40</span>
             </label>
@@ -104,6 +108,7 @@
                 class="calc__option-variant"
                 value="60x40"
                 name="size"
+                data-price="1800"
               />
               <span>60x40</span>
             </label>
@@ -113,6 +118,7 @@
                 class="calc__option-variant"
                 value="60x50"
                 name="size"
+                data-price="2000"
               />
               <span>60x50</span>
             </label>
@@ -122,6 +128,7 @@
                 class="calc__option-variant"
                 value="70x50"
                 name="size"
+                data-price="2200"
               />
               <span>70x50</span>
             </label>
@@ -131,6 +138,7 @@
                 class="calc__option-variant"
                 value="75x50"
                 name="size"
+                data-price="2300"
               />
               <span>75x50</span>
             </label>
@@ -140,6 +148,7 @@
                 class="calc__option-variant"
                 value="80x60"
                 name="size"
+                data-price="2600"
               />
               <span>80x60</span>
             </label>
@@ -149,6 +158,7 @@
                 class="calc__option-variant"
                 value="90x60"
                 name="size"
+                data-price="2900"
               />
               <span>90x60</span>
             </label>
@@ -158,6 +168,7 @@
                 class="calc__option-variant"
                 value="100x70"
                 name="size"
+                data-price="3300"
               />
               <span>100x70</span>
             </label>
@@ -167,6 +178,7 @@
                 class="calc__option-variant"
                 value="120x80"
                 name="size"
+                data-price="4400"
               />
               <span>120x80</span>
             </label>
@@ -263,8 +275,9 @@
             <input
               type="radio"
               class="calc__option-variant"
-              value="Альбомная"
+              value="Лаком"
               name="coverage"
+              data-price="1000"
             />
             <span>Лаком</span>
           </label>
@@ -274,6 +287,7 @@
               class="calc__option-variant"
               value="Текстурным гелем"
               name="coverage"
+              data-price="3400"
             />
             <span>Текстурным гелем</span>
           </label>
@@ -283,6 +297,7 @@
               class="calc__option-variant"
               value="Акриловой краской"
               name="coverage"
+              data-price="0"
             />
             <span>Акриловой краской</span>
           </label>
@@ -292,6 +307,7 @@
               class="calc__option-variant"
               value="Без покрытия"
               name="coverage"
+              data-price="0"
             />
             <span>Не нужно</span>
           </label>
@@ -303,18 +319,24 @@
         <div class="calc__option-vars">
           <div class="sizes__format-select calc__design-select">
             <select class="select-reset custom-select" name="design">
-              <option value="Обработка не нужна">Обработка не нужна</option>
-              <option value="Поп-арт">Поп-арт</option>
-              <option value="Дрим-арт">Дрим-арт</option>
-              <option value="Коллаж">Коллаж</option>
-              <option value="Фотомозайка">Фотомозайка</option>
-              <option value="Шарж">Шарж</option>
-              <option value="В стилe Love is...">В стилe Love is...</option>
-              <option value="Аниме">Аниме</option>
-              <option value="Портрет из слов">Портрет из слов</option>
-              <option value="Digital art">Digital art</option>
-              <option value="В образе">В образе</option>
-              <option value="Гранж">Гранж</option>
+              <option value="Обработка не нужна" data-price="0">
+                Обработка не нужна
+              </option>
+              <option value="Поп-арт" data-price="1500">Поп-арт</option>
+              <option value="Дрим-арт" data-price="1500">Дрим-арт</option>
+              <option value="Коллаж" data-price="500">Коллаж</option>
+              <option value="Фотомозайка" data-price="1000">Фотомозайка</option>
+              <option value="Шарж" data-price="1500">Шарж</option>
+              <option value="В стилe Love is..." data-price="500">
+                В стилe Love is...
+              </option>
+              <option value="Аниме" data-price="1500">Аниме</option>
+              <option value="Портрет из слов" data-price="1500">
+                Портрет из слов
+              </option>
+              <option value="Digital art" data-price="1500">Digital art</option>
+              <option value="В образе" data-price="1500">В образе</option>
+              <option value="Гранж" data-price="1500">Гранж</option>
             </select>
             <img
               loading="lazy"
@@ -419,8 +441,10 @@
               <p class="calc__option-descr">1-2 рабочих дня</p>
             </div>
             <div class="calc__option-row" data-name="total">
-              <p class="calc__option-sub">Итоговая стоимость холста:</p>
-              <p class="calc__option-descr">Не выбрано</p>
+              <p class="calc__option-sub calc__option-sub--total">
+                Итоговая стоимость холста:
+              </p>
+              <p class="calc__option-descr calc__option-descr--total">0 руб.</p>
             </div>
             <button
               class="btn-reset calcform__form-button calcform__form-button--close"
