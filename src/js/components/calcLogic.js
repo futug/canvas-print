@@ -1,4 +1,5 @@
 import { totalRow } from "./calcDemo";
+import { updateSummry } from "./calcformShipment";
 
 const sizes = document.querySelectorAll("input[name='size']");
 const design = document.querySelector("select[name='design']");
@@ -7,14 +8,16 @@ let basePrice = 0;
 let square = 0;
 let selectedDesign = 0;
 let selectedCoverages = 0;
+let coveragesPrice = square * selectedCoverages;
 
-export let total = basePrice + selectedDesign + square * selectedCoverages;
+export let total = basePrice + selectedDesign + coveragesPrice;
 
 coverages.forEach((item) => {
   item.addEventListener("change", (e) => {
     selectedCoverages = parseFloat(e.target.dataset.price);
     updateTotal();
     totalRow.textContent = ` ${total} руб.`;
+    updateSummry();
   });
 });
 
@@ -24,6 +27,7 @@ design.addEventListener("change", (e) => {
   );
   updateTotal();
   totalRow.textContent = ` ${total} руб.`;
+  updateSummry();
 });
 
 sizes.forEach((item) => {
@@ -33,6 +37,7 @@ sizes.forEach((item) => {
     basePrice = parseFloat(e.target.dataset.price);
     updateTotal();
     totalRow.textContent = ` ${total} руб.`;
+    updateSummry();
   });
 });
 
@@ -43,5 +48,4 @@ function calculateSquare(value) {
 
 function updateTotal() {
   total = basePrice + selectedDesign + square * selectedCoverages;
-  console.log(`Total: ${total} руб.`);
 }
