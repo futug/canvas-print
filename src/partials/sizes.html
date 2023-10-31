@@ -17,34 +17,49 @@
       <div class="sizes__format">
         <p class="sizes__format-title">Укажите формат</p>
         <div class="sizes__format-variants">
-          <p class="sizes__format-variant" data-base="900">Альбомный</p>
-          <p class="sizes__format-variant" data-base="1000">Портретный</p>
-          <p class="sizes__format-variant" data-base="1200">Панорамный</p>
-          <p class="sizes__format-variant" data-base="1500">Квадратный</p>
+          <label class="sizes__format-variant">
+            <input type="radio" name="format" value="2" />
+            Альбомный
+          </label>
+          <label class="sizes__format-variant">
+            <input type="radio" name="format" value="2" />
+            Портретный
+          </label>
+          <label class="sizes__format-variant">
+            <input type="radio" name="format" value="0.5" />
+            Панорамный
+          </label>
+          <label class="sizes__format-variant">
+            <input type="radio" name="format" value="1" />
+            Квадратный
+          </label>
         </div>
         <div class="sizes__format-select">
-          <select class="select-reset custom-select">
-            <option value="1">Выберите размер</option>
-            <option value="1.1">40x30</option>
-            <option value="1.2">45x30</option>
-            <option value="1.3">50x40</option>
-            <option value="1.4">60x40</option>
-            <option value="1.5">60x50</option>
-            <option value="1.6">70x50</option>
-            <option value="1.7">75x50</option>
-            <option value="1.8">80x60</option>
-            <option value="1.9">90x60</option>
-            <option value="2">100x70</option>
-            <option value="2.1">120x80</option>
-            <option value="2.2">30x30</option>
-            <option value="2.3">40x40</option>
-            <option value="2.4">50x50</option>
-            <option value="2.5">60x60</option>
-            <option value="2.6">80x80</option>
-            <option value="2.7">100x100</option>
-            <option value="2.8">30x90</option>
-            <option value="2.9">40x100</option>
-            <option value="3">40x120</option>
+          <select
+            class="select-reset custom-select sizes__select"
+            name="size-first"
+          >
+            <option value="1" data-price="0">Выберите размер</option>
+            <option value="40x30" data-price="1300">40x30</option>
+            <option value="45x30" data-price="1400">45x30</option>
+            <option value="50x40" data-price="1600">50x40</option>
+            <option value="60x40" data-price="1800">60x40</option>
+            <option value="60x50" data-price="2000">60x50</option>
+            <option value="70x50" data-price="2200">70x50</option>
+            <option value="75x50" data-price="2300">75x50</option>
+            <option value="80x60" data-price="2600">80x60</option>
+            <option value="90x60" data-price="2900">90x60</option>
+            <option value="100x70" data-price="3300">100x70</option>
+            <option value="120x80" data-price="4000">120x80</option>
+            <option value="30x30" data-price="1100">30x30</option>
+            <option value="40x40" data-price="1400">40x40</option>
+            <option value="50x50" data-price="1800">50x50</option>
+            <option value="60x60" data-price="2200">60x60</option>
+            <option value="80x80" data-price="3100">80x80</option>
+            <option value="100x100" data-price="4100">100x100</option>
+            <option value="30x90" data-price="2100">30x90</option>
+            <option value="40x100" data-price="2500">40x100</option>
+            <option value="40x100" data-price="2900">40x120</option>
           </select>
           <img
             loading="lazy"
@@ -58,26 +73,186 @@
         <p class="sizes__format-final pop-up__button">0 руб.</p>
       </div>
       <div class="sizes__variants">
-        <p class="sizes__variants-item" data-multiplier="1.1">40x30</p>
-        <p class="sizes__variants-item" data-multiplier="1.2">45x30</p>
-        <p class="sizes__variants-item" data-multiplier="1.3">50x40</p>
-        <p class="sizes__variants-item" data-multiplier="1.4">60x40</p>
-        <p class="sizes__variants-item" data-multiplier="1.5">60x50</p>
-        <p class="sizes__variants-item" data-multiplier="1.6">70x50</p>
-        <p class="sizes__variants-item" data-multiplier="1.7">75x50</p>
-        <p class="sizes__variants-item" data-multiplier="1.8">80x60</p>
-        <p class="sizes__variants-item" data-multiplier="1.9">90x60</p>
-        <p class="sizes__variants-item" data-multiplier="2">100x70</p>
-        <p class="sizes__variants-item" data-multiplier="2.1">120x80</p>
-        <p class="sizes__variants-item" data-multiplier="2.2">30x30</p>
-        <p class="sizes__variants-item" data-multiplier="2.3">40x40</p>
-        <p class="sizes__variants-item" data-multiplier="2.4">50x50</p>
-        <p class="sizes__variants-item" data-multiplier="2.5">60x60</p>
-        <p class="sizes__variants-item" data-multiplier="2.6">80x80</p>
-        <p class="sizes__variants-item" data-multiplier="2.7">100x100</p>
-        <p class="sizes__variants-item" data-multiplier="2.8">30x90</p>
-        <p class="sizes__variants-item" data-multiplier="2.9">40x100</p>
-        <p class="sizes__variants-item" data-multiplier="3">40x120</p>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="40x30"
+            data-price="1300"
+          />
+          40x30
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="45x30"
+            data-price="1400"
+          />
+          45x30
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="50x40"
+            data-price="1600"
+          />
+          50x40
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="60x40"
+            data-price="1800"
+          />
+          60x40
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="60x50"
+            data-price="2000"
+          />
+          60x50
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="70x50"
+            data-price="2200"
+          />
+          70x50
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="75x50"
+            data-price="2300"
+          />
+          75x50
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="80x60"
+            data-price="2600"
+          />
+          80x60
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="90x60"
+            data-price="2900"
+          />
+          90x60
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="100x70"
+            data-price="3300"
+          />
+          100x70
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="120x80"
+            data-price="4000"
+          />
+          120x80
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="30x30"
+            data-price="1100"
+          />
+          30x30
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="40x40"
+            data-price="1400"
+          />
+          40x40
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="50x50"
+            data-price="1800"
+          />
+          50x50
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="60x60"
+            data-price="2200"
+          />
+          60x60
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="80x80"
+            data-price="3200"
+          />
+          80x80
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="100x100"
+            data-price="4500"
+          />
+          100x100
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="30x90"
+            data-price="2100"
+          />
+          30x90
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="40x100"
+            data-price="2400"
+          />
+          40x100
+        </label>
+        <label class="sizes__variants-item">
+          <input
+            type="radio"
+            name="size-first"
+            value="40x120"
+            data-price="2900"
+          />
+          40x120
+        </label>
       </div>
     </div>
   </div>
