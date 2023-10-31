@@ -10,7 +10,7 @@ const swiper = new Swiper(".ideas__slider", {
   slidesPerView: 1,
   spaceBetween: 20,
   breakpoints: {
-    320: {
+    360: {
       grid: {
         rows: 1,
       },
