@@ -12,6 +12,7 @@ import ourWorksSwiper from "./components/ourWorksSwiper";
 import calcFileLabel from "./components/calcFileLabel";
 import calcDemo from "./components/calcDemo";
 import calcFakeSelect from "./components/calcFakeSelect";
+import "./components/summary";
 import calcDemoShow from "./components/calcDemoShow";
 import calcLogic from "./components/calcLogic";
 import calcformShipment from "./components/calcformShipment";

@@ -1,9 +1,12 @@
 import Swiper from "swiper";
+import { Keyboard, A11y, FreeMode } from "swiper/modules";
 
 const swiper = new Swiper(".process__slider", {
+  modules: [Keyboard, FreeMode, A11y],
   slidesPerView: "1",
+  spaceBetween: 0,
   breakpoints: {
-    320: {
+    360: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
@@ -20,4 +23,11 @@ const swiper = new Swiper(".process__slider", {
       spaceBetween: 60,
     },
   },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  a11y: true,
+  grabCursor: true,
+  freeMode: true,
 });
