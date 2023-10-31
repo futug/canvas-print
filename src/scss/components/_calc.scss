@@ -243,6 +243,10 @@
       border-bottom: none;
     }
 
+    &--total {
+      padding: 25px 5px;
+    }
+
     @media (max-width: 525px) {
       padding: 10px 0;
     }
@@ -257,6 +261,14 @@
       border-bottom: none;
     }
     background-color: #fff;
+
+    &--total {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 30px;
+      color: var(--primary-accent-color);
+      padding: 25px 0;
+    }
   }
 
   &__order-btn {

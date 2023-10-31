@@ -1,6 +1,8 @@
 import { selectedFiles, fileInput } from "./calcFileLabel";
+import { total } from "./calcLogic";
 const inputs = document.querySelectorAll("input[name], select[name]");
 const optionRows = document.querySelectorAll(".calc__option-row");
+export let totalRow = document.querySelector(".calc__option-descr--total");
 
 inputs.forEach((input) => {
   input.addEventListener("change", () => {
