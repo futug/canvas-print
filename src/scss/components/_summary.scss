@@ -26,7 +26,7 @@
     }
 
     @media (max-width: 1024px) {
-      margin-top: 50px;
+      margin-top: 30px;
     }
 
     @media (max-width: 768px) {
@@ -43,7 +43,7 @@
     }
 
     @media (max-width: 525px) {
-      margin-top: 40px;
+      margin-top: 20px;
     }
 
     &_active {
@@ -62,7 +62,7 @@
 
   &__button {
     display: none;
-    background-color: #E70000;
+    background-color: var(--primary-accent-color);
     padding: 18px 54px;
     width: 200px;
     font-weight: 600;

@@ -1,12 +1,18 @@
 .our-works {
   padding-bottom: 90px;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 525px) {
+    padding-bottom: 10px;
+  }
+
   &__slider {
+    position: relative;
     margin-top: 70px;
     padding-bottom: 40px;
-
-    @media (max-width: 1024px) {
-      padding-bottom: 60px;
-    }
   }
 
   &__container {
