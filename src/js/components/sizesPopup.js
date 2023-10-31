@@ -1,4 +1,4 @@
-import { display, total } from "./sizesCalc";
+import { displayedPrice } from "./sizesCalc";
 import { body } from "./burger";
 
 const popUpCaller = document.querySelectorAll(".pop-up__button");
@@ -7,14 +7,14 @@ const popUpForm = document.querySelector(".pop-up__form");
 const popUpCloseIcon = document.querySelector(".pop-up__close-icon");
 const popUpSummaryBlock = document.querySelector(".pop-up__form-summary");
 
-display.addEventListener("click", popUpOpen);
+// popUpCaller.addEventListener("click", popUpOpen);
 popUpCloseIcon.addEventListener("click", popUpClose);
 
 popUpCaller.forEach((item) => {
   item.addEventListener("click", () => {
     popUpOpen();
 
-    if (total <= 0) {
+    if (displayedPrice <= 0) {
       popUpSummaryBlock.style.display = "none";
     } else {
       popUpSummaryBlock.style.display = "block";
@@ -36,23 +36,8 @@ function popUpClose() {
   body.classList.remove("lock");
 }
 
-// document.addEventListener("click", (e) => {
-//   let isPopUpActive = popUp.classList.contains("pop-up--active");
-//   let isClickInsideForm =
-//     popUpForm.contains(e.target) || e.target === popUpForm;
-//   let isClickInsidePopUp = e.target === popUp;
-//   let isClickInsideClose = e.target === popUpCloseIcon;
-//   if (
-//     isPopUpActive &&
-//     !isClickInsideForm &&
-//     !isClickInsidePopUp &&
-//     !isClickInsideClose
-//   ) {
-//     console.log(popUp);
-//     popUpClose();
-//   }
-// });
-
 function popUpSummary() {
-  popUpSummaryBlock.querySelector("span").textContent = `${total} руб.`;
+  popUpSummaryBlock.querySelector(
+    "span"
+  ).textContent = `${displayedPrice} руб.`;
 }
