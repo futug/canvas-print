@@ -164,3 +164,19 @@ h6 {
 .swiper-button-disabled {
   visibility: hidden;
 }
+
+section {
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+.section-wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 4;
+
+  &--gray {
+    background: linear-gradient(to bottom, #fff 50%, #f8f8f8 50%);
+  }
+}
