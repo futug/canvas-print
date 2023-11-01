@@ -25,7 +25,7 @@
       grid-column: span 6;
     }
 
-    @media (max-width: 525px) {
+    @media (max-width: 768px) {
       display: block;
     }
   }
@@ -81,7 +81,13 @@
 
     @media (max-width: 365px) {
       & label {
-        width: auto;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 340px) {
+      & label {
+        grid-column: span 2;
       }
     }
 
@@ -149,6 +155,7 @@
 
       @media (max-width: 365px) {
         padding: 5px;
+        font-size: 12px;
       }
     }
 
@@ -367,6 +374,11 @@
       line-height: 21px;
     }
 
+    @media (max-width: 365px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
     & input {
       width: 0.1px;
       height: 0.1px;
@@ -424,11 +436,11 @@
     }
   }
 
-  @media (max-width: 365px) {
-    & label {
-      width: auto;
-    }
-  }
+  // @media (max-width: 365px) {
+  //   & label {
+  //     width: auto;
+  //   }
+  // }
 
   & input[type="radio"] {
     // display: none;
@@ -494,6 +506,7 @@
 
     @media (max-width: 365px) {
       padding: 5px;
+      font-size: 12px;
     }
   }
 }
