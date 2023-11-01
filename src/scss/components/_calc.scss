@@ -333,6 +333,12 @@
       font-size: 18px;
       background-color: transparent;
       resize: none;
+
+      &::placeholder {
+        font-size: 15px;
+        line-height: 30px;
+        color: #cccccc;
+      }
     }
   }
 
