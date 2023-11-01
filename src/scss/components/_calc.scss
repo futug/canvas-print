@@ -26,8 +26,7 @@
     }
 
     @media (max-width: 525px) {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      display: block;
     }
   }
   &__option-title {
@@ -379,7 +378,7 @@
 
   & span {
     padding: 5px;
-    @media (max-width: 375px) {
+    @media (max-width: 405px) {
       font-size: 12px;
       padding: 5px 0;
     }
