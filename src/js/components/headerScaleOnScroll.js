@@ -16,5 +16,5 @@ document.addEventListener("scroll", () => {
 function scaleOnScroll() {
   header.style.paddingTop = "0px";
   header.style.paddingBottom = "0px";
-  logo.style.transform = "scale(0.5)";
+  logo.style.transform = "scale(0.7)";
 }
