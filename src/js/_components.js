@@ -17,3 +17,5 @@ import calcDemoShow from "./components/calcDemoShow";
 import calcLogic from "./components/calcLogic";
 import calcformShipment from "./components/calcformShipment";
 import designAdditionalCounter from "./components/designAdditionalCounter";
+import "./components/sizesSwiper";
+
