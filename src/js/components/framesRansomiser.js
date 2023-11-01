@@ -41,3 +41,5 @@ framesCheckPic.forEach((framePic, index) => {
   jpg.src = frameData.src;
   webp.srcset = frameData.srcWebP;
 });
+
+console.log(randomFrames);
