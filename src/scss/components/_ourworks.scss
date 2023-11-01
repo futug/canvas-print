@@ -17,10 +17,9 @@
     }
   }
 
-  &__slider {
+  &__swiper-wrapper {
+    position: relative;
     margin-top: 70px;
-    padding-bottom: 40px;
-    overflow: hidden;
 
     @media (max-width: 1024px) {
       margin-top: 55px;
@@ -28,6 +27,15 @@
 
     @media (max-width: 525px) {
       margin-top: 32px;
+    }
+  }
+
+  &__slider {
+    padding-bottom: 40px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      overflow: visible;
     }
   }
 
@@ -64,7 +72,7 @@
     background-color: transparent;
     width: 30px;
     height: 30px;
-    top: calc(50% + 60px);
+    top: calc(50% - 20px);
     transform: translate(0, -50%);
     z-index: 10;
 
