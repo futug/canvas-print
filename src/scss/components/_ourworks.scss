@@ -1,18 +1,34 @@
 .our-works {
-  padding-bottom: 90px;
+  &__content {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    padding-bottom: 0;
+    padding-top: 0;
+    position: relative;
 
-  @media (max-width: 1024px) {
-    padding-bottom: 50px;
-  }
+    @media (max-width: 1024px) {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
 
-  @media (max-width: 525px) {
-    padding-bottom: 10px;
+    @media (max-width: 525px) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
   }
 
   &__slider {
-    position: relative;
     margin-top: 70px;
     padding-bottom: 40px;
+    overflow: hidden;
+
+    @media (max-width: 1024px) {
+      margin-top: 55px;
+    }
+
+    @media (max-width: 525px) {
+      margin-top: 32px;
+    }
   }
 
   &__slide {
@@ -31,6 +47,10 @@
     object-fit: cover;
   }
 
+  .swiper-pagination {
+    bottom: 0;
+  }
+
   .swiper-pagination-bullet {
     background-color: #C1BFBF;
   }
@@ -44,7 +64,7 @@
     background-color: transparent;
     width: 30px;
     height: 30px;
-    top: calc(50% - 20px);
+    top: calc(50% + 60px);
     transform: translate(0, -50%);
     z-index: 10;
 
@@ -59,5 +79,11 @@
     }
   }
 
+  &__prev-btn {
+    left: 5px;
+  }
 
+  &__next-btn {
+    right: 5px;
+  }
 }
