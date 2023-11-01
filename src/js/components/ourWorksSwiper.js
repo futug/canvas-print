@@ -14,11 +14,9 @@ const swiper = new Swiper(".our-works__slider", {
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 30,
     },
     1024: {
       slidesPerView: 4,
-      spaceBetween: 40,
     },
   },
   pagination: {
