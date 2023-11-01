@@ -1,0 +1,24 @@
+.design-additional {
+  max-width: 529px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  display: none;
+  & button {
+    width: 100%;
+  }
+  & span {
+    width: 100%;
+  }
+
+  &--active {
+    display: flex;
+  }
+}
+
+.design-additional__title {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
