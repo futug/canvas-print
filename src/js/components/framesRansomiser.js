@@ -27,15 +27,17 @@ const randomFrames = shuffledIndexes
   .map((index) => framesAttr[index]);
 
 const framesCheck = document.querySelector(".calc__frames");
+const framesCheckLabel = framesCheck.querySelectorAll("label");
 const framesCheckPic = framesCheck.querySelectorAll("picture");
 
-for (let i = 0; i < framesCheckPic.length; i++) {
-  const jpg = framesCheckPic[i].querySelector("img");
-  const webp = framesCheckPic[i].querySelector("source");
-  const frameData = randomFrames[i];
+framesCheckPic.forEach((framePic, index) => {
+  const jpg = framePic.querySelector("img");
+  const webp = framePic.querySelector("source");
+  const input = framesCheckLabel[index].querySelector("input");
+  const frameData = randomFrames[index];
 
-  jpg.setAttribute("data-art", frameData.art);
-  jpg.setAttribute("data-price", frameData.price);
-  jpg.setAttribute("src", frameData.src);
-  webp.setAttribute("srcset", frameData.srcWebP);
-}
+  input.value = frameData.art;
+  input.dataset.price = frameData.price;
+  jpg.src = frameData.src;
+  webp.srcset = frameData.srcWebP;
+});
