@@ -1,2 +1,5 @@
 import AOS from "aos";
-AOS.init({ disable: true });
+
+AOS.init({
+  disable: "mobile",
+});
