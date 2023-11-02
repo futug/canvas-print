@@ -6,18 +6,31 @@ import {
   counter,
 } from "./designAdditionalCounter";
 
-const sizes = document.querySelectorAll("input[name='size']");
-const design = document.querySelector("select[name='design']");
-const coverages = document.querySelectorAll("input[name='coverage']");
-const frames = document.querySelectorAll("input[name='frame']");
+const orientations = document.querySelectorAll("input[name='orientation']");
+export const sizes = document.querySelectorAll("input[name='size']");
+export const design = document.querySelector("select[name='design']");
+export const coverages = document.querySelectorAll("input[name='coverage']");
+export const frames = document.querySelectorAll("input[name='frame']");
+const stretch = document.querySelectorAll("input[name='stretch']");
+const suspend = document.querySelectorAll("input[name='suspend']");
+const wrap = document.querySelectorAll('input[name="wrap"]');
+const image = document.querySelector("input[type='file']");
 
 let basePrice = 0;
 let square = 0;
 let perimetr = 0;
-let selectedDesign = 0;
+export let selectedDesign = 0;
+export let selectedSize = 0;
 export let selectedDesignAdd = 0;
-let selectedCoverages = 0;
-let selectedFrame = 0;
+export let selectedCoverages = 0;
+export let selectedFrame = 0;
+export let selectedFrameArt = "";
+export let selectedOrientation = "";
+export let selectedStretch = "";
+export let selectedSuspend = "";
+export let selectedWrap = "";
+export let selectedFile = "";
+
 let coveragesPrice = square * selectedCoverages;
 let framePrice = perimetr * selectedFrame;
 
@@ -28,8 +41,39 @@ export let total =
   framePrice +
   counter * selectedDesignAdd;
 
+image.addEventListener("change", (e) => {
+  selectedFile = e.target.files[0];
+  const fakeForm = document.querySelector(".test-form__file");
+  if (e.target.files.length > 0) {
+    fakeForm.files = e.target.files;
+  }
+});
+
+wrap.forEach((item) => {
+  item.addEventListener("change", (e) => {
+    selectedWrap = e.target.value;
+  });
+});
+
+suspend.forEach((item) => {
+  item.addEventListener("change", (e) => {
+    selectedSuspend = e.target.value;
+  });
+});
+stretch.forEach((item) => {
+  item.addEventListener("change", (e) => {
+    selectedStretch = e.target.value;
+  });
+});
+orientations.forEach((item) => {
+  item.addEventListener("change", (e) => {
+    selectedOrientation = e.target.value;
+  });
+});
+
 frames.forEach((item) => {
   item.addEventListener("change", (e) => {
+    selectedFrameArt = e.target.value;
     selectedFrame =
       parseFloat(e.target.dataset.price) > 0
         ? parseFloat(e.target.dataset.price) + 350
@@ -37,6 +81,7 @@ frames.forEach((item) => {
     updateTotal();
     totalRow.textContent = ` ${total} руб.`;
     updateSummry();
+    console.log(selectedFrameArt);
   });
 });
 
@@ -71,9 +116,9 @@ design.addEventListener("change", (e) => {
 
 sizes.forEach((item) => {
   item.addEventListener("change", (e) => {
-    const value = e.target.value;
-    square = calculateSquare(value);
-    perimetr = calculatePerimetr(value);
+    selectedSize = e.target.value;
+    square = calculateSquare(selectedSize);
+    perimetr = calculatePerimetr(selectedSize);
     basePrice = parseFloat(e.target.dataset.price);
     updateTotal();
     totalRow.textContent = ` ${total} руб.`;

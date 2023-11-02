@@ -22,3 +22,5 @@ import framesRandomiser from "./components/framesRansomiser";
 import aos from "./components/aos";
 import headerScaleOnScroll from "./components/headerScaleOnScroll";
 import cursorTrigger from "./components/cursorTrigger";
+import prepareSending from "./components/prepareSending";
+import valuesTransfer from "./components/valuesTransfer";

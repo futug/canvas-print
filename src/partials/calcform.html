@@ -19,14 +19,14 @@
       <form class="calcform__form">
         <label>
           <input
-            class="input-reset calcform__form-input"
+            class="input-reset calcform__form-input calcform__form-name"
             type="text"
             placeholder="Ваше имя"
           />
         </label>
         <label>
           <input
-            class="input-reset calcform__form-input"
+            class="input-reset calcform__form-input calcform__form-email"
             type="email"
             placeholder="Ваш e-mail"
           />
@@ -34,7 +34,7 @@
         <label>
           <input
             inputmode="numeric"
-            class="input-reset calcform__form-input"
+            class="input-reset calcform__form-input calcform__form-phone"
             type="tel"
             placeholder="Ваш телефон"
           />
@@ -42,7 +42,7 @@
         <p class="calcform__form-summary">
           Итоговая стоимость заказа: <span>0 руб.</span>
         </p>
-        <button class="btn-reset calcform__form-button" type="button">
+        <button class="btn-reset calcform__form-button calcform__form-sending">
           Оформить заказ
         </button>
         <button
@@ -55,7 +55,7 @@
       <div class="calcform__delivery-details">
         <div class="calcform__select">
           <select
-            class="select-reset calcform__form-input calcform__form-select"
+            class="select-reset calcform__form-input calcform__form-select calcform__form-delivery"
           >
             <option value="Самовывоз" selected>Самовывоз</option>
             <option value="Доставка 1">Доставка 1</option>

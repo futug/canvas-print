@@ -29,7 +29,7 @@ function popUpOpen() {
   body.classList.add("lock");
 }
 
-function popUpClose() {
+export function popUpClose() {
   popUp.classList.remove("pop-up--active");
   popUpForm.classList.remove("pop-up__form--active");
   popUpForm.reset();
