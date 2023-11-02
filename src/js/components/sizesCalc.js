@@ -5,14 +5,18 @@ const formatsInputs = document.querySelectorAll("input[name='format']");
 const sizesSelect = document.querySelectorAll(".sizes__select > option");
 const select = document.querySelector(".sizes__select");
 const display = document.querySelector(".sizes__format-final");
-let selectedOption = 0;
+export let selectedOption = 0;
 export let displayedPrice = 0;
+export let selectedCalcSize = 0;
+export let selectedCalcSizeInSelect = 0;
+export let selectedFormat = "";
 sizes.forEach((item) => {
   item.addEventListener("click", activeClass);
 });
 
 sizesInputs.forEach((item) => {
   item.addEventListener("click", displayPrice);
+  item.addEventListener("click", selectSize);
 });
 formats.forEach((item) => {
   item.addEventListener("click", activeClass);
@@ -22,11 +26,16 @@ select.addEventListener("change", (event) => {
   selectedOption = parseFloat(
     event.target.options[event.target.selectedIndex].dataset.price
   );
+  selectedCalcSizeInSelect = event.target.value;
   displayedPrice = selectedOption;
   display.textContent = `${displayedPrice} руб.`;
 });
 
 formatsInputs.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    selectedFormat = e.target.dataset.title;
+    console.log(selectedFormat);
+  });
   item.addEventListener("click", disableSize);
   item.addEventListener("click", disableSizeSelectOption);
 });
@@ -47,7 +56,6 @@ function activeClass(event) {
 
 function disableSize(event) {
   let formatValue = parseFloat(event.target.value);
-
   const equalOne = [];
   const lessThanOne = [];
   const greaterThanOne = [];
@@ -163,4 +171,9 @@ function disableSizeSelectOption(event) {
 function displayPrice(event) {
   displayedPrice = parseFloat(event.target.dataset.price);
   display.textContent = `${displayedPrice} руб.`;
+}
+
+function selectSize(event) {
+  selectedCalcSize = event.target.value;
+  console.log(selectedCalcSize);
 }
