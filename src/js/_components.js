@@ -24,3 +24,4 @@ import headerScaleOnScroll from "./components/headerScaleOnScroll";
 import cursorTrigger from "./components/cursorTrigger";
 import prepareSending from "./components/prepareSending";
 import valuesTransfer from "./components/valuesTransfer";
+import validation from "./components/validation";

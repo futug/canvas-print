@@ -18,7 +18,7 @@ import {
 } from "./calcLogic";
 
 import { popUpClose } from "./sizesPopup";
-let sendingObj = [];
+let sendingObj = {};
 // ПЕРВЫЙ КАЛЬКУЛТОР
 
 const sendButtonFirst = document.querySelector(".pop-up__form-button");
@@ -27,8 +27,8 @@ const phoneFirst = document.querySelector(".phone");
 
 sendButtonFirst.addEventListener("click", (e) => {
   e.preventDefault();
-  sendingObj = [];
-  sendingObj.push({
+
+  sendingObj = {
     size: selectedCalcSizeInSelect
       ? selectedCalcSizeInSelect.toString()
       : selectedCalcSize.toString(),
@@ -36,7 +36,8 @@ sendButtonFirst.addEventListener("click", (e) => {
     total: displayedPrice.toString(),
     name: nameFirst.value.toString(),
     phone: phoneFirst.value.toString(),
-  });
+  };
+
   const newTransfer = new FormTransfer(".test-form-small", sendingObj);
   popUpClose();
 });
@@ -60,23 +61,23 @@ coverages.forEach((item) => {
 });
 sendButton.addEventListener("click", (e) => {
   e.preventDefault();
-  sendingObj = [];
-  sendingObj.push({
+
+  sendingObj = {
     orientation: selectedOrientation.toString(),
     size: selectedSize.toString(),
     stretch: selectedStretch.toString(),
     suspend: selectedSuspend.toString(),
     design: design.value.toString(),
-    coverages: selectedCoverage.toString(),
+    coverage: selectedCoverage.toString(),
     frame: selectedFrameArt.toString(),
-    designAdd: counter.toString(),
+    additional: counter.toString(),
     total: total.toString(),
     wrap: selectedWrap.toString(),
     name: name.value,
     phone: phone.value,
     email: email.value,
     deliveryWay: deliveryWay.value.toString(),
-  });
+  };
   console.log(sendingObj);
   const newTransfer = new FormTransfer(".test-form", sendingObj);
 });
