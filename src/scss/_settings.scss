@@ -14,13 +14,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-// .page__body {
-//   margin: 0;
-//   min-width: 320px;
-//   min-height: 100%;
-//   font-size: 16px;
-// }
-
 img {
   height: auto;
   max-width: 100%;
@@ -34,7 +27,7 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
 }
 
 .btn-reset {
@@ -179,4 +172,9 @@ section {
   &--gray {
     background: linear-gradient(to bottom, #fff 50%, #f8f8f8 50%);
   }
+}
+
+.just-validate-error-label {
+  margin-bottom: 10px;
+  color: var(--primary-text-color-light) !important;
 }

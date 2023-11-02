@@ -1,8 +1,8 @@
 import { validateForms } from "../functions/validate-forms";
-
+import { popUpClose } from "./sizesPopup";
 const rulesPopup = [
   {
-    ruleSelector: ".input-name",
+    ruleSelector: ".pop-up__form-name",
     rules: [
       {
         rule: "minLength",
@@ -16,7 +16,7 @@ const rulesPopup = [
     ],
   },
   {
-    ruleSelector: ".input-tel",
+    ruleSelector: ".pop-up__form-tel",
     tel: true,
     telError: "Введите корректный телефон",
     rules: [
@@ -29,7 +29,12 @@ const rulesPopup = [
   },
 ];
 
-validateForms(".pop-up__form", rulesPopup);
+const afterForm = () => {
+  console.log("Произошла отправка, тут можно писать любые действия");
+  popUpClose();
+};
+
+validateForms(".pop-up__form", rulesPopup, afterForm);
 
 const rulesCalcform = [
   {
