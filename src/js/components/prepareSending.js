@@ -22,11 +22,11 @@ let sendingObj = {};
 // ПЕРВЫЙ КАЛЬКУЛТОР
 
 const sendButtonFirst = document.querySelector(".pop-up__form-button");
-const nameFirst = document.querySelector(".name");
-const phoneFirst = document.querySelector(".phone");
+const nameFirst = document.querySelector(".pop-up__form-name");
+const phoneFirst = document.querySelector(".pop-up__form-tel");
 
 sendButtonFirst.addEventListener("click", (e) => {
-  e.preventDefault();
+  // e.preventDefault();
 
   sendingObj = {
     size: selectedCalcSizeInSelect
@@ -39,7 +39,7 @@ sendButtonFirst.addEventListener("click", (e) => {
   };
 
   const newTransfer = new FormTransfer(".test-form-small", sendingObj);
-  popUpClose();
+  // popUpClose();
 });
 
 // ПЕРВЫЙ КАЛЬКУЛТОР
@@ -60,7 +60,7 @@ coverages.forEach((item) => {
   });
 });
 sendButton.addEventListener("click", (e) => {
-  e.preventDefault();
+  // e.preventDefault();
 
   sendingObj = {
     orientation: selectedOrientation.toString(),
@@ -78,7 +78,7 @@ sendButton.addEventListener("click", (e) => {
     email: email.value,
     deliveryWay: deliveryWay.value.toString(),
   };
-  console.log(sendingObj);
+  // console.log(sendingObj);
   const newTransfer = new FormTransfer(".test-form", sendingObj);
 });
 
