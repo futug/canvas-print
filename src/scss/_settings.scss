@@ -166,8 +166,8 @@ section {
 
 .section-wrapper {
   background-color: #fff;
-  position: relative;
-  z-index: 4;
+  /* position: relative;
+  z-index: 4; */
 
   &--gray {
     background: linear-gradient(to bottom, #fff 50%, #f8f8f8 50%);
