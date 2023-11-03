@@ -1,6 +1,6 @@
 import { displayedPrice } from "./sizesCalc";
 import { body } from "./burger";
-
+import { OuterClick } from "./outerClick";
 const popUpCaller = document.querySelectorAll(".pop-up__button");
 const popUp = document.querySelector(".pop-up");
 const popUpForm = document.querySelector(".pop-up__form");
@@ -43,3 +43,9 @@ function popUpSummary() {
     "span"
   ).textContent = `${displayedPrice} руб.`;
 }
+
+document.addEventListener("keydown", (event) => {
+  if (event.code === "Escape" && popUp.classList.contains("pop-up--active")) {
+    popUpClose();
+  }
+});

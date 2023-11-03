@@ -1,11 +1,11 @@
-const burger = document.querySelector(".burger");
+import { OuterClick } from "./outerClick";
+
+export const burger = document.querySelector(".burger");
 const closeIcon = document.querySelector(".mobile-menu__close");
 export const body = document.querySelector("body");
+export const mobileMenu = document.querySelector(".mobile-menu");
 
 if (burger && closeIcon) {
-  const mobileMenu = document.querySelector(".mobile-menu");
-  const body = document.querySelector("body");
-
   burger.addEventListener("click", mobileMenuUp);
   closeIcon.addEventListener("click", mobileMenuDown);
 
@@ -19,3 +19,10 @@ if (burger && closeIcon) {
     body.classList.remove("lock");
   }
 }
+
+const newOuterClick = new OuterClick(
+  mobileMenu,
+  "mobile-menu--active",
+  body,
+  ".header"
+);

@@ -25,3 +25,4 @@ import prepareSending from "./components/prepareSending";
 import valuesTransfer from "./components/valuesTransfer";
 import validation from "./components/validation";
 import preloader from "./components/preloader";
+import outerClick from "./components/outerClick";
