@@ -1,5 +1,3 @@
-console.log("components");
-
 import burger from "./components/burger";
 import sizesCalc from "./components/sizesCalc";
 import sizesPopup from "./components/sizesPopup";
@@ -25,3 +23,4 @@ import headerScaleOnScroll from "./components/headerScaleOnScroll";
 import prepareSending from "./components/prepareSending";
 import valuesTransfer from "./components/valuesTransfer";
 import validation from "./components/validation";
+import preloader from "./components/preloader";

@@ -15,17 +15,21 @@
   @media (max-width: 1024px) {
     border-radius: 0 80px 0 80px;
     padding-bottom: 50px;
-    background: url("../../img/svg/coverage_decore-bot-left.svg") no-repeat 0.5% 85%,
+    background: url("../../img/svg/coverage_decore-bot-left.svg") no-repeat 0.5%
+        85%,
       url("../../img/svg/coverage_decore-top-right.svg") no-repeat 95% 8%,
-      url("../../img/svg/coverage_decore-bot-right.svg") no-repeat bottom right/ 35px 65px,
+      url("../../img/svg/coverage_decore-bot-right.svg") no-repeat bottom right/
+        35px 65px,
       var(--primary-accent-color);
   }
 
   @media (max-width: 525px) {
     border-radius: 0 40px 0 40px;
     padding-bottom: 40px;
-    background: url("../../img/svg/coverage_decore-top-right.svg") no-repeat 95% 8%/ 120px 131px,
-      url("../../img/svg/coverage_decore-bot-right.svg") no-repeat bottom right/ 35px 65px,
+    background: url("../../img/svg/coverage_decore-top-right.svg") no-repeat 95%
+        8%/ 120px 131px,
+      url("../../img/svg/coverage_decore-bot-right.svg") no-repeat bottom right/
+        35px 65px,
       var(--primary-accent-color);
   }
 
@@ -74,6 +78,9 @@
 
     img {
       vertical-align: middle;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
   }
 
