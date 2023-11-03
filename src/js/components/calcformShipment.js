@@ -4,8 +4,11 @@ const summray = document.querySelector(".calcform__form-summary");
 const shipment = document.querySelector(".calcform__form-select");
 const form = document.querySelector(".calcform__form");
 const privacy = document.querySelector(".calcform__form-privacy");
+const sendBtn = document.querySelector(".calcform__form-sending");
 
-shipment.addEventListener("change", updateSummry);
+if (shipment) {
+  shipment.addEventListener("change", updateSummry);
+}
 export function updateSummry() {
   const selectedOption = shipment.options[shipment.selectedIndex];
   if (selectedOption.value === "Самовывоз") {
@@ -16,14 +19,18 @@ export function updateSummry() {
   }
 }
 
-if (!privacy.checked) {
-  form.setAttribute("invalid", true);
+if (privacy) {
+  if (!privacy.checked) {
+    sendBtn.setAttribute("disabled", true);
+  }
 }
 
-privacy.addEventListener("change", () => {
-  if (!privacy.checked) {
-    form.setAttribute("invalid", true);
-  } else {
-    form.removeAttribute("invalid");
-  }
-});
+if (privacy) {
+  privacy.addEventListener("change", () => {
+    if (!privacy.checked) {
+      sendBtn.setAttribute("disabled", true);
+    } else {
+      sendBtn.removeAttribute("disabled");
+    }
+  });
+}

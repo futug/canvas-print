@@ -1,7 +1,18 @@
 <section class="hero">
   <picture>
-    <source srcset="./img/hero.webp" type="image/webp" />
-    <source srcset="./img/hero.jpg" type="image/jpeg" />
+    <source
+      srcset="./img/hero.webp"
+      type="image/webp"
+      media="(min-width: 600px)"
+    />
+    <source
+      srcset="./img/hero.jpg"
+      type="image/jpeg"
+      media="(min-width: 600px)"
+    />
+    <source srcset="./img/hero-mobile.webp" type="image/webp" />
+    <source srcset="./img/hero-mobile.jpg" type="image/jpeg" />
+
     <img src="./img/hero.jpg" class="hero__image" alt="hero background" />
   </picture>
   <div class="hero__content container">

@@ -1,5 +1,7 @@
 import AOS from "aos";
 
-AOS.init({
-  disable: "mobile",
+document.addEventListener("DOMContentLoaded", () => {
+  AOS.init({
+    disable: "mobile",
+  });
 });

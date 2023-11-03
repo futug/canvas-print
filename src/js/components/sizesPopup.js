@@ -7,21 +7,23 @@ const popUpForm = document.querySelector(".pop-up__form");
 const popUpCloseIcon = document.querySelector(".pop-up__close-icon");
 const popUpSummaryBlock = document.querySelector(".pop-up__form-summary");
 
-// popUpCaller.addEventListener("click", popUpOpen);
-popUpCloseIcon.addEventListener("click", popUpClose);
+if (popUpCloseIcon) {
+  popUpCloseIcon.addEventListener("click", popUpClose);
+}
 
-popUpCaller.forEach((item) => {
-  item.addEventListener("click", () => {
-    popUpOpen();
+if (popUpCaller) {
+  popUpCaller.forEach((item) => {
+    item.addEventListener("click", () => {
+      popUpOpen();
 
-    if (displayedPrice <= 0) {
-      popUpSummaryBlock.style.display = "none";
-    } else {
-      popUpSummaryBlock.style.display = "block";
-    }
+      if (displayedPrice <= 0) {
+        popUpSummaryBlock.style.display = "none";
+      } else {
+        popUpSummaryBlock.style.display = "block";
+      }
+    });
   });
-});
-
+}
 function popUpOpen() {
   popUp.classList.add("pop-up--active");
   popUpForm.classList.add("pop-up__form--active");
