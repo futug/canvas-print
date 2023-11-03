@@ -203,9 +203,9 @@
         <div class="calc__option-vars calc__option-vars--custom">
           <p>Задать свой размер:</p>
           <div class="calc__custom-inputs">
-            <input type="number" class="width" />
+            <input type="number" class="width" title="своя ширина" />
             x
-            <input type="number" class="height" />
+            <input type="number" class="height" title="своя высота" />
           </div>
         </div>
         <!-- Размер холста -->
@@ -402,54 +402,66 @@
         <p class="calc__option-title">Дизайнерская обработка:</p>
         <div class="calc__option-vars">
           <div class="sizes__format-select calc__design-select">
-            <select class="select-reset custom-select" name="design">
-              <option
-                value="Обработка не нужна"
-                data-price="0"
-                data-additional="0"
-              >
-                Обработка не нужна
-              </option>
-              <option value="Поп-арт" data-price="1500" data-additional="500">
-                Поп-арт
-              </option>
-              <option value="Дрим-арт" data-price="1500" data-additional="500">
-                Дрим-арт
-              </option>
-              <option value="Коллаж" data-price="500" data-additional="0">
-                Коллаж
-              </option>
-              <option value="Фотомозайка" data-price="1000">Фотомозайка</option>
-              <option value="Шарж" data-price="1500" data-additional="500">
-                Шарж
-              </option>
-              <option value="В стилe Love is..." data-price="500">
-                В стилe Love is...
-              </option>
-              <option value="Аниме" data-price="1500" data-additional="500">
-                Аниме
-              </option>
-              <option
-                value="Портрет из слов"
-                data-price="1500"
-                data-additional="500"
-              >
-                Портрет из слов
-              </option>
-              <option
-                value="Digital art"
-                data-price="1500"
-                data-additional="500"
-              >
-                Digital art
-              </option>
-              <option value="В образе" data-price="1500" data-additional="500">
-                В образе
-              </option>
-              <option value="Гранж" data-price="1500" data-additional="500">
-                Гранж
-              </option>
-            </select>
+            <label>
+              <select class="select-reset custom-select" name="design">
+                <option
+                  value="Обработка не нужна"
+                  data-price="0"
+                  data-additional="0"
+                >
+                  Обработка не нужна
+                </option>
+                <option value="Поп-арт" data-price="1500" data-additional="500">
+                  Поп-арт
+                </option>
+                <option
+                  value="Дрим-арт"
+                  data-price="1500"
+                  data-additional="500"
+                >
+                  Дрим-арт
+                </option>
+                <option value="Коллаж" data-price="500" data-additional="0">
+                  Коллаж
+                </option>
+                <option value="Фотомозайка" data-price="1000">
+                  Фотомозайка
+                </option>
+                <option value="Шарж" data-price="1500" data-additional="500">
+                  Шарж
+                </option>
+                <option value="В стилe Love is..." data-price="500">
+                  В стилe Love is...
+                </option>
+                <option value="Аниме" data-price="1500" data-additional="500">
+                  Аниме
+                </option>
+                <option
+                  value="Портрет из слов"
+                  data-price="1500"
+                  data-additional="500"
+                >
+                  Портрет из слов
+                </option>
+                <option
+                  value="Digital art"
+                  data-price="1500"
+                  data-additional="500"
+                >
+                  Digital art
+                </option>
+                <option
+                  value="В образе"
+                  data-price="1500"
+                  data-additional="500"
+                >
+                  В образе
+                </option>
+                <option value="Гранж" data-price="1500" data-additional="500">
+                  Гранж
+                </option>
+              </select>
+            </label>
             <img
               loading="lazy"
               src="../img/chevron_for_select.svg"

@@ -2,7 +2,8 @@
   border-radius: 100px 0 100px 0;
   background-color: var(--primary-accent-color);
   color: var(--primary-text-color-light);
-  background: url("../../img/svg/coverage_decore-top-right.svg") no-repeat 33px 27px,
+  background: url("../../img/svg/coverage_decore-top-right.svg") no-repeat 33px
+      27px,
     url("../../img/testimonials_decore-right-top.svg") no-repeat 95% 5%,
     url("../../img/testimonials_decore-right-bottom.svg") no-repeat bottom right,
     var(--primary-accent-color);
@@ -37,6 +38,11 @@
     grid-row: 2 / 5;
     grid-column: 1 / 6;
     padding-right: 22px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
 
     @media (max-width: 992px) {
       grid-row: 3 / 4;
@@ -110,13 +116,12 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #FFFFFF;
+    color: #ffffff;
 
     &:hover {
       color: var(--black);
       background-color: var(--primary-text-color-light);
     }
-
 
     @media (max-width: 525px) {
       font-size: 17px;
