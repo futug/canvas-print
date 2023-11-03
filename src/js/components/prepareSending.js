@@ -16,8 +16,8 @@ import {
   selectedSuspend,
   selectedWrap,
 } from "./calcLogic";
+import { counter } from "./designAdditionalCounter";
 
-import { popUpClose } from "./sizesPopup";
 let sendingObj = {};
 // ПЕРВЫЙ КАЛЬКУЛТОР
 
@@ -25,27 +25,26 @@ const sendButtonFirst = document.querySelector(".pop-up__form-button");
 const nameFirst = document.querySelector(".pop-up__form-name");
 const phoneFirst = document.querySelector(".pop-up__form-tel");
 
-sendButtonFirst.addEventListener("click", (e) => {
-  // e.preventDefault();
+if (sendButtonFirst && nameFirst && phoneFirst) {
+  sendButtonFirst.addEventListener("click", (e) => {
+    sendingObj = {
+      size: selectedCalcSizeInSelect
+        ? selectedCalcSizeInSelect.toString()
+        : selectedCalcSize.toString(),
+      orientation: selectedFormat.toString(),
+      total: displayedPrice.toString(),
+      name: nameFirst.value.toString(),
+      phone: phoneFirst.value.toString(),
+    };
 
-  sendingObj = {
-    size: selectedCalcSizeInSelect
-      ? selectedCalcSizeInSelect.toString()
-      : selectedCalcSize.toString(),
-    orientation: selectedFormat.toString(),
-    total: displayedPrice.toString(),
-    name: nameFirst.value.toString(),
-    phone: phoneFirst.value.toString(),
-  };
-
-  const newTransfer = new FormTransfer(".test-form-small", sendingObj);
-  // popUpClose();
-});
+    const newTransfer = new FormTransfer(".test-form-small", sendingObj);
+  });
+}
 
 // ПЕРВЫЙ КАЛЬКУЛТОР
 
 // ВТОРОЙ КАЛЬКУЛЯТОР
-import { counter } from "./designAdditionalCounter";
+
 const sendButton = document.querySelector(".calcform__form-sending");
 const phone = document.querySelector(".calcform__form-phone");
 const email = document.querySelector(".calcform__form-email");
@@ -54,32 +53,34 @@ const deliveryWay = document.querySelector(".calcform__form-delivery");
 
 let selectedCoverage = "";
 
-coverages.forEach((item) => {
-  item.addEventListener("change", (e) => {
-    selectedCoverage = e.target.value;
+if (coverages) {
+  coverages.forEach((item) => {
+    item.addEventListener("change", (e) => {
+      selectedCoverage = e.target.value;
+    });
   });
-});
-sendButton.addEventListener("click", (e) => {
-  // e.preventDefault();
+}
+if (sendButton && phone && email && name && deliveryWay) {
+  sendButton.addEventListener("click", () => {
+    sendingObj = {
+      orientation: selectedOrientation.toString(),
+      size: selectedSize.toString(),
+      stretch: selectedStretch.toString(),
+      suspend: selectedSuspend.toString(),
+      design: design.value.toString(),
+      coverage: selectedCoverage.toString(),
+      frame: selectedFrameArt.toString(),
+      additional: counter.toString(),
+      total: total.toString(),
+      wrap: selectedWrap.toString(),
+      name: name.value,
+      phone: phone.value,
+      email: email.value,
+      deliveryWay: deliveryWay.value.toString(),
+    };
 
-  sendingObj = {
-    orientation: selectedOrientation.toString(),
-    size: selectedSize.toString(),
-    stretch: selectedStretch.toString(),
-    suspend: selectedSuspend.toString(),
-    design: design.value.toString(),
-    coverage: selectedCoverage.toString(),
-    frame: selectedFrameArt.toString(),
-    additional: counter.toString(),
-    total: total.toString(),
-    wrap: selectedWrap.toString(),
-    name: name.value,
-    phone: phone.value,
-    email: email.value,
-    deliveryWay: deliveryWay.value.toString(),
-  };
-  // console.log(sendingObj);
-  const newTransfer = new FormTransfer(".test-form", sendingObj);
-});
+    const newTransfer = new FormTransfer(".test-form", sendingObj);
+  });
+}
 
 // ВТОРОЙ КАЛЬКУЛЯТОР

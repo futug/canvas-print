@@ -41,90 +41,110 @@ export let total =
   framePrice +
   counter * selectedDesignAdd;
 
-image.addEventListener("change", (e) => {
-  selectedFile = e.target.files[0];
-  const fakeForm = document.querySelector(".test-form__file");
-  if (e.target.files.length > 0) {
-    fakeForm.files = e.target.files;
-  }
-});
+if (image) {
+  image.addEventListener("change", (e) => {
+    selectedFile = e.target.files[0];
+    const fakeForm = document.querySelector(".test-form__file");
+    if (e.target.files.length > 0) {
+      fakeForm.files = e.target.files;
+    }
+  });
+}
 
-wrap.forEach((item) => {
-  item.addEventListener("change", (e) => {
-    selectedWrap = e.target.value;
+if (wrap) {
+  wrap.forEach((item) => {
+    item.addEventListener("change", (e) => {
+      selectedWrap = e.target.value;
+    });
   });
-});
+}
 
-suspend.forEach((item) => {
-  item.addEventListener("change", (e) => {
-    selectedSuspend = e.target.value;
+if (suspend) {
+  suspend.forEach((item) => {
+    item.addEventListener("change", (e) => {
+      selectedSuspend = e.target.value;
+    });
   });
-});
-stretch.forEach((item) => {
-  item.addEventListener("change", (e) => {
-    selectedStretch = e.target.value;
-  });
-});
-orientations.forEach((item) => {
-  item.addEventListener("change", (e) => {
-    selectedOrientation = e.target.value;
-  });
-});
+}
 
-frames.forEach((item) => {
-  item.addEventListener("change", (e) => {
-    selectedFrameArt = e.target.value;
-    selectedFrame =
-      parseFloat(e.target.dataset.price) > 0
-        ? parseFloat(e.target.dataset.price) + 350
-        : 0;
+if (stretch) {
+  stretch.forEach((item) => {
+    item.addEventListener("change", (e) => {
+      selectedStretch = e.target.value;
+    });
+  });
+}
+
+if (orientations) {
+  orientations.forEach((item) => {
+    item.addEventListener("change", (e) => {
+      selectedOrientation = e.target.value;
+    });
+  });
+}
+
+if (frames) {
+  frames.forEach((item) => {
+    item.addEventListener("change", (e) => {
+      selectedFrameArt = e.target.value;
+      selectedFrame =
+        parseFloat(e.target.dataset.price) > 0
+          ? parseFloat(e.target.dataset.price) + 350
+          : 0;
+      updateTotal();
+      totalRow.textContent = ` ${total} руб.`;
+      updateSummry();
+      console.log(selectedFrameArt);
+    });
+  });
+}
+
+if (coverages) {
+  coverages.forEach((item) => {
+    item.addEventListener("change", (e) => {
+      selectedCoverages = parseFloat(e.target.dataset.price);
+      updateTotal();
+      totalRow.textContent = ` ${total} руб.`;
+      updateSummry();
+    });
+  });
+}
+
+if (design) {
+  design.addEventListener("change", (e) => {
+    selectedDesign = parseFloat(
+      e.target.options[e.target.selectedIndex].dataset.price
+    );
+    selectedDesignAdd = parseFloat(
+      e.target.options[e.target.selectedIndex].dataset.additional
+    );
+
+    if (selectedDesignAdd > 0) {
+      designAddBlock.classList.add("design-additional--active");
+      designAddTitle.classList.add("design-additional__title--active");
+    } else {
+      designAddBlock.classList.remove("design-additional--active");
+      designAddTitle.classList.remove("design-additional__title--active");
+    }
     updateTotal();
     totalRow.textContent = ` ${total} руб.`;
     updateSummry();
-    console.log(selectedFrameArt);
   });
-});
+}
 
-coverages.forEach((item) => {
-  item.addEventListener("change", (e) => {
-    selectedCoverages = parseFloat(e.target.dataset.price);
-    updateTotal();
-    totalRow.textContent = ` ${total} руб.`;
-    updateSummry();
+if (sizes) {
+  sizes.forEach((item) => {
+    item.addEventListener("change", (e) => {
+      selectedSize = e.target.value;
+      square = calculateSquare(selectedSize);
+      perimetr = calculatePerimetr(selectedSize);
+      basePrice = parseFloat(e.target.dataset.price);
+      updateTotal();
+      totalRow.textContent = ` ${total} руб.`;
+      updateSummry();
+    });
   });
-});
-
-design.addEventListener("change", (e) => {
-  selectedDesign = parseFloat(
-    e.target.options[e.target.selectedIndex].dataset.price
-  );
-  selectedDesignAdd = parseFloat(
-    e.target.options[e.target.selectedIndex].dataset.additional
-  );
-
-  if (selectedDesignAdd > 0) {
-    designAddBlock.classList.add("design-additional--active");
-    designAddTitle.classList.add("design-additional__title--active");
-  } else {
-    designAddBlock.classList.remove("design-additional--active");
-    designAddTitle.classList.remove("design-additional__title--active");
-  }
-  updateTotal();
-  totalRow.textContent = ` ${total} руб.`;
-  updateSummry();
-});
-
-sizes.forEach((item) => {
-  item.addEventListener("change", (e) => {
-    selectedSize = e.target.value;
-    square = calculateSquare(selectedSize);
-    perimetr = calculatePerimetr(selectedSize);
-    basePrice = parseFloat(e.target.dataset.price);
-    updateTotal();
-    totalRow.textContent = ` ${total} руб.`;
-    updateSummry();
-  });
-});
+}
 
 function calculateSquare(value) {
   const [firstNumber, secondNumber] = value.split("x");

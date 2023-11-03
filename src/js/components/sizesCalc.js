@@ -10,35 +10,45 @@ export let displayedPrice = 0;
 export let selectedCalcSize = 0;
 export let selectedCalcSizeInSelect = 0;
 export let selectedFormat = "";
-sizes.forEach((item) => {
-  item.addEventListener("click", activeClass);
-});
-
-sizesInputs.forEach((item) => {
-  item.addEventListener("click", displayPrice);
-  item.addEventListener("click", selectSize);
-});
-formats.forEach((item) => {
-  item.addEventListener("click", activeClass);
-});
-
-select.addEventListener("change", (event) => {
-  selectedOption = parseFloat(
-    event.target.options[event.target.selectedIndex].dataset.price
-  );
-  selectedCalcSizeInSelect = event.target.value;
-  displayedPrice = selectedOption;
-  display.textContent = `${displayedPrice} руб.`;
-});
-
-formatsInputs.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    selectedFormat = e.target.dataset.title;
-    console.log(selectedFormat);
+if (sizes) {
+  sizes.forEach((item) => {
+    item.addEventListener("click", activeClass);
   });
-  item.addEventListener("click", disableSize);
-  item.addEventListener("click", disableSizeSelectOption);
-});
+}
+
+if (sizesInputs) {
+  sizesInputs.forEach((item) => {
+    item.addEventListener("click", displayPrice);
+    item.addEventListener("click", selectSize);
+  });
+}
+if (formats) {
+  formats.forEach((item) => {
+    item.addEventListener("click", activeClass);
+  });
+}
+
+if (select) {
+  select.addEventListener("change", (event) => {
+    selectedOption = parseFloat(
+      event.target.options[event.target.selectedIndex].dataset.price
+    );
+    selectedCalcSizeInSelect = event.target.value;
+    displayedPrice = selectedOption;
+    display.textContent = `${displayedPrice} руб.`;
+  });
+}
+
+if (formatsInputs) {
+  formatsInputs.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      selectedFormat = e.target.dataset.title;
+      console.log(selectedFormat);
+    });
+    item.addEventListener("click", disableSize);
+    item.addEventListener("click", disableSizeSelectOption);
+  });
+}
 
 function activeClass(event) {
   if (event.target.classList.contains("sizes__format-variant")) {

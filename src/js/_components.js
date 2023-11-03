@@ -13,8 +13,9 @@ import calcFakeSelect from "./components/calcFakeSelect";
 import "./components/summary";
 import calcDemoShow from "./components/calcDemoShow";
 import calcLogic from "./components/calcLogic";
-import calcformShipment from "./components/calcformShipment";
 import designAdditionalCounter from "./components/designAdditionalCounter";
+import calcformShipment from "./components/calcformShipment";
+
 import "./components/sizesSwiper";
 import framesRandomiser from "./components/framesRansomiser";
 import aos from "./components/aos";
