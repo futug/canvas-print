@@ -1,21 +1,21 @@
 import { displayedPrice } from "./sizesCalc";
-import { body } from "./burger";
-import { OuterClick } from "./outerClick";
+import { ModalsHandler } from "./modalsHandler";
+
 const popUpCaller = document.querySelectorAll(".pop-up__button");
-const popUp = document.querySelector(".pop-up");
-const popUpForm = document.querySelector(".pop-up__form");
-const popUpCloseIcon = document.querySelector(".pop-up__close-icon");
 const popUpSummaryBlock = document.querySelector(".pop-up__form-summary");
 
-if (popUpCloseIcon) {
-  popUpCloseIcon.addEventListener("click", popUpClose);
-}
+const newPopUp = new ModalsHandler(
+  "pop-up__button",
+  "pop-up__close-icon",
+  "pop-up",
+  "pop-up__form"
+);
+newPopUp.initialize();
 
 if (popUpCaller) {
   popUpCaller.forEach((item) => {
     item.addEventListener("click", () => {
-      popUpOpen();
-
+      popUpSummary();
       if (displayedPrice <= 0) {
         popUpSummaryBlock.style.display = "none";
       } else {
@@ -24,28 +24,9 @@ if (popUpCaller) {
     });
   });
 }
-function popUpOpen() {
-  popUp.classList.add("pop-up--active");
-  popUpForm.classList.add("pop-up__form--active");
-  popUpSummary();
-  body.classList.add("lock");
-}
-
-export function popUpClose() {
-  popUp.classList.remove("pop-up--active");
-  popUpForm.classList.remove("pop-up__form--active");
-  popUpForm.reset();
-  body.classList.remove("lock");
-}
 
 function popUpSummary() {
   popUpSummaryBlock.querySelector(
     "span"
   ).textContent = `${displayedPrice} руб.`;
 }
-
-document.addEventListener("keydown", (event) => {
-  if (event.code === "Escape" && popUp.classList.contains("pop-up--active")) {
-    popUpClose();
-  }
-});

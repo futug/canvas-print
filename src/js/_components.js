@@ -15,7 +15,6 @@ import calcDemoShow from "./components/calcDemoShow";
 import calcLogic from "./components/calcLogic";
 import designAdditionalCounter from "./components/designAdditionalCounter";
 import calcformShipment from "./components/calcformShipment";
-
 import "./components/sizesSwiper";
 import framesRandomiser from "./components/framesRansomiser";
 import aos from "./components/aos";
@@ -25,4 +24,4 @@ import prepareSending from "./components/prepareSending";
 import valuesTransfer from "./components/valuesTransfer";
 import validation from "./components/validation";
 import preloader from "./components/preloader";
-import outerClick from "./components/outerClick";
+import modalsHandler from "./components/modalsHandler";

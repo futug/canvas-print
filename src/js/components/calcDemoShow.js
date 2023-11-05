@@ -1,27 +1,9 @@
-import { body } from "./burger";
+import { ModalsHandler } from "./modalsHandler";
 
-const calcShowBtn = document.querySelector(".calcform__form-button--white");
-const calcShowBtnClose = document.querySelector(
-  ".calcform__form-button--close"
+const demoModal = new ModalsHandler(
+  "calcform__form-button--white",
+  "calc__options-wrapper",
+  "calc__options-wrapper",
+  "calcform__form-button--close"
 );
-
-if (calcShowBtn) {
-  calcShowBtn.addEventListener("click", optionsUp);
-}
-if (calcShowBtnClose) {
-  calcShowBtnClose.addEventListener("click", optionDown);
-}
-
-function optionsUp() {
-  document
-    .querySelector(".calc__options-wrapper")
-    .classList.add("calc__options-wrapper--isOpen");
-  body.classList.add("lock");
-}
-
-function optionDown() {
-  document
-    .querySelector(".calc__options-wrapper")
-    .classList.remove("calc__options-wrapper--isOpen");
-  body.classList.remove("lock");
-}
+demoModal.initialize();

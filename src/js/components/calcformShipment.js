@@ -2,7 +2,6 @@ import { total } from "./calcLogic";
 
 const summray = document.querySelector(".calcform__form-summary");
 const shipment = document.querySelector(".calcform__form-select");
-const form = document.querySelector(".calcform__form");
 const privacy = document.querySelector(".calcform__form-privacy");
 const sendBtn = document.querySelector(".calcform__form-sending");
 
