@@ -1,5 +1,6 @@
 import { updateTotal, total } from "./calcLogic";
 import { totalRow } from "./calcDemo";
+import { updateSummry } from "./calcformShipment";
 
 export const designAddTitle = document.querySelector(
   ".design-additional__title"
@@ -22,6 +23,7 @@ function increment() {
   counter++;
   counterDisplay.textContent = counter;
   updateTotal();
+  updateSummry();
   totalRow.textContent = ` ${total} руб.`;
   decrementDisabled();
   finalPrice = total;
@@ -31,7 +33,7 @@ function decrement() {
   counter--;
   counterDisplay.textContent = counter;
   updateTotal();
-
+  updateSummry();
   totalRow.textContent = ` ${total} руб.`;
   finalPrice = total;
   decrementDisabled();
