@@ -9,7 +9,7 @@ if (preloader && animatePart) {
     setTimeout(() => {
       preloader.classList.add("loader__wrapper--hidden");
       animatePart.classList.add("lds-facebook--hidden");
-      body.classList.remove("lock");
+      body.style.overflow = "auto";
     }, 200);
   });
 }

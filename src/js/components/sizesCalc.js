@@ -43,7 +43,6 @@ if (formatsInputs) {
   formatsInputs.forEach((item) => {
     item.addEventListener("click", (e) => {
       selectedFormat = e.target.dataset.title;
-      console.log(selectedFormat);
     });
     item.addEventListener("click", disableSize);
     item.addEventListener("click", disableSizeSelectOption);
@@ -185,5 +184,4 @@ function displayPrice(event) {
 
 function selectSize(event) {
   selectedCalcSize = event.target.value;
-  console.log(selectedCalcSize);
 }

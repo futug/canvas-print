@@ -48,6 +48,4 @@ if (framesList.length > 0) {
       webp.srcset = frameData.srcWebP;
     });
   }
-
-  console.log(randomFrames);
 }
